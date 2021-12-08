@@ -1,0 +1,31 @@
+.able {
+  @extend %section;
+  padding-left: 190px;
+}
+.able__title {
+  @extend %title;
+  margin-bottom: 50px;
+  padding-left: 24px;
+}
+.able__content {
+  max-width: 1088px;
+  display: flex;
+  justify-content: space-between;
+}
+.able__list {
+  @extend %list;
+}
+.able__item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  &::before {
+    content: '';
+    display: inline-block;
+    margin-right: 24px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: $accent-color;
+  }
+}

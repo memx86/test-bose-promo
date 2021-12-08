@@ -1,0 +1,30 @@
+.footer {
+  @extend %section;
+  padding-left: 190px;
+  padding-right: 80px;
+}
+.container--footer {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__list {
+  @extend %list;
+  display: flex;
+}
+.footer__link {
+  @extend %link;
+  color: $footer-text-color;
+  transition: color 250ms linear;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.footer__link--tel {
+  color: $main-text-color;
+}
+.footer__item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}

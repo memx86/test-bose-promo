@@ -1,0 +1,64 @@
+.faq {
+  @extend %section;
+}
+.container--faq {
+  max-width: 1060px;
+}
+.faq__title {
+  @extend %title;
+  margin-bottom: 26px;
+}
+.faq__list {
+  @extend %list;
+}
+.faq__item {
+  &:not(:last-child) {
+    margin-bottom: 60px;
+  }
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+.faq__subtitle {
+  @extend %subtitle;
+  position: relative;
+  text-transform: none;
+  &::after {
+    content: '?';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto Condensed;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 0.7;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+  }
+}
+.faq__number {
+  margin-right: 32px;
+  font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont,
+    avenir next, avenir, segoe ui, helvetica neue, helvetica, roboto, Ubuntu,
+    noto, arial, sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.25;
+}
+.faq__text {
+  margin-top: 16px;
+  padding-left: 69px;
+  max-width: 897px;
+  transform: scaleY(0);
+  transition: transform 250ms linear;
+  &.active {
+    transform: scaleY(1);
+  }
+}

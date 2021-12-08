@@ -1,0 +1,42 @@
+.review {
+  @extend %section;
+}
+.review__video {
+  margin-right: 150px;
+  min-width: 920px;
+  max-height: 590px;
+}
+.review__title {
+  @extend %title;
+  margin-bottom: 50px;
+}
+.review__subtitle {
+  @extend %subtitle;
+  margin-bottom: 16px;
+  color: $accent-color;
+}
+.review__text {
+  margin-bottom: 70px;
+}
+.review__list {
+  @extend %list;
+  display: flex;
+  font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont,
+    avenir next, avenir, segoe ui, helvetica neue, helvetica, roboto, Ubuntu,
+    noto, arial, sans-serif;
+  font-size: 28px;
+  line-height: 1.25;
+  color: $accent-color;
+}
+.review__item {
+  margin-right: 12px;
+  &:not(:last-child)::after {
+    content: '-';
+    margin-left: 12px;
+  }
+  opacity: 0.2;
+  transition: opacity 250ms linear;
+  &.active {
+    opacity: 1;
+  }
+}

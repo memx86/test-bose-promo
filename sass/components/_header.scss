@@ -1,0 +1,44 @@
+.header {
+  padding-top: 29px;
+  padding-right: 80px;
+  margin-bottom: 35px;
+  padding-left: 80px;
+  font-weight: 600;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__link {
+  @extend %link;
+  color: inherit;
+  transition: color 250ms linear;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.header__logo {
+  width: 130px;
+  height: 16px;
+  color: $title-text-color;
+  fill: currentColor;
+}
+.header__list {
+  @extend %list;
+  display: flex;
+}
+.header__item {
+  &:not(:last-child) {
+    margin-right: 77px;
+  }
+}
+.header__link {
+  @extend %link;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.19;
+}

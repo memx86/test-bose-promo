@@ -1,0 +1,69 @@
+.buy {
+  @extend %section;
+  padding-left: 190px;
+}
+.buy__content {
+  margin-right: 150px;
+}
+.buy__title {
+  @extend %title;
+  margin-bottom: 50px;
+}
+.buy__label {
+  margin-bottom: 50px;
+  display: block;
+}
+.buy__radio {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  &:first-child {
+    margin-right: 20px;
+  }
+  outline: none;
+  appearance: none;
+  background-color: #dbdbdb;
+  border-radius: 50%;
+  cursor: pointer;
+  &:checked {
+    background-color: #101010;
+    border: 2px solid #df3d3a;
+  }
+}
+.buy__link {
+  @extend %link;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 26px;
+  padding-bottom: 25px;
+  &:first-child {
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+  }
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+.buy__icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.buy__label--price {
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $accent-color;
+}
+.buy__button {
+  @extend %button;
+  min-width: 400px;
+  min-height: 68px;
+  color: $button-text-color;
+  background-color: $accent-color;
+  transition: background-color 250ms linear;
+  &:hover,
+  &:focus {
+    background-color: $hover-color;
+  }
+}

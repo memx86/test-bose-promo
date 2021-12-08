@@ -1,0 +1,22 @@
+body {
+  color: $main-text-color;
+  font-family: Gilroy, -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    segoe ui, helvetica neue, helvetica, roboto, Ubuntu, noto, arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.45;
+  background-color: $main-bg-color;
+}
+/* обнуление внешних отступов */
+h1,
+h2,
+h3,
+ul,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

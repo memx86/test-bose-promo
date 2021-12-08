@@ -1,0 +1,27 @@
+.design {
+  @extend %section;
+  padding-right: 144px;
+}
+.container--design {
+  display: flex;
+  justify-content: space-between;
+}
+.design__image {
+  margin-right: 150px;
+}
+.design__title {
+  @extend %title;
+  margin-bottom: 50px;
+}
+.design__list {
+  @extend %list;
+}
+.design__item {
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+.design__subtitle {
+  @extend %subtitle;
+  margin-bottom: 20px;
+}

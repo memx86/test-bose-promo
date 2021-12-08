@@ -1,0 +1,26 @@
+.silence {
+  @extend %section;
+}
+.silence__title {
+  @extend %title;
+  padding-right: 169px;
+  text-align: right;
+  margin-bottom: 50px;
+}
+.silence__image {
+  margin-bottom: 50px;
+}
+.silence__list {
+  @extend %list;
+  padding-left: 190px;
+  display: flex;
+}
+.silence__item {
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+.silence__subtitle {
+  @extend %subtitle;
+  margin-bottom: 20px;
+}

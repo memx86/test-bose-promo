@@ -1,0 +1,15 @@
+.tech {
+  @extend %section;
+  padding-left: 190px;
+}
+.tech__content {
+  margin-right: 170px;
+}
+.tech__title {
+  @extend %title;
+  margin-bottom: 50px;
+}
+.tech__subtitle {
+  @extend %subtitle;
+  margin-bottom: 20px;
+}

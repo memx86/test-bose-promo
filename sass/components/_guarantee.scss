@@ -1,0 +1,39 @@
+.guarantee {
+  @extend %section;
+}
+.guarantee__image {
+  margin-right: 150px;
+}
+.guarantee__content {
+  padding-top: 25px;
+}
+.guarantee__title {
+  @extend %title;
+  margin-bottom: 50px;
+}
+.guarantee__list {
+  @extend %list;
+  max-width: 400px;
+}
+.guarantee__item {
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  &::before {
+    content: '';
+    display: block;
+    margin-bottom: 24px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: $accent-color;
+  }
+}
+.guarantee__subtitle {
+  @extend %subtitle;
+  margin-bottom: 16px;
+}
+.guarantee__icon {
+  display: block;
+  padding-top: 446px;
+}
