@@ -56,9 +56,12 @@
   margin-top: 16px;
   padding-left: 69px;
   max-width: 897px;
-  transform: scaleY(0);
-  transition: transform 250ms linear;
-  &.active {
-    transform: scaleY(1);
+  height: 0;
+  overflow: hidden;
+  // transform: translateY(-150%);
+  // transition: transform 250ms linear;
+  .faq__item.active & {
+    // transform: translateY(0);
+    height: auto;
   }
 }

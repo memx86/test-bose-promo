@@ -786,17 +786,12 @@ img {
   margin-top: 16px;
   padding-left: 69px;
   max-width: 897px;
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
-  -webkit-transition: -webkit-transform 250ms linear;
-  transition: -webkit-transform 250ms linear;
-  transition: transform 250ms linear;
-  transition: transform 250ms linear, -webkit-transform 250ms linear;
+  height: 0;
+  overflow: hidden;
 }
 
-.faq__text.active {
-  -webkit-transform: scaleY(1);
-          transform: scaleY(1);
+.faq__item.active .faq__text {
+  height: auto;
 }
 
 .buy {
