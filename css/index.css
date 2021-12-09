@@ -52,7 +52,9 @@
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1320px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -797,6 +799,9 @@ img {
 
 .buy {
   padding-left: 190px;
+}
+
+.container--buy {
   position: relative;
 }
 
@@ -843,7 +848,7 @@ img {
   display: block;
   position: absolute;
   top: 85px;
-  left: 740px;
+  left: 550px;
   width: 700px;
   height: 664px;
   background-image: url("../../images/buy/img-black.jpg");
