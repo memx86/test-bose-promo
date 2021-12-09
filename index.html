@@ -311,7 +311,7 @@
         <div class="container container--faq">
           <h2 class="faq__title">FAQ</h2>
           <ul class="faq__list">
-            <li class="faq__item active">
+            <li class="faq__item" data-faq1>
               <h3 class="faq__subtitle">
                 <span class="faq__number">01</span>
                 Как выполнить сопряжение с мобильным устройством?
@@ -329,7 +329,7 @@
                 устройстве.
               </p>
             </li>
-            <li class="faq__item">
+            <li class="faq__item" data-faq2>
               <h3 class="faq__subtitle">
                 <span class="faq__number">02</span>
                 Каков диапазон беспроводной связи у Bose NC 700?
@@ -344,7 +344,7 @@
                 praesentium?
               </p>
             </li>
-            <li class="faq__item">
+            <li class="faq__item" data-faq3>
               <h3 class="faq__subtitle">
                 <span class="faq__number">03</span>
                 Как сложить наушники Bose NC 700 для хранения?
@@ -358,7 +358,7 @@
                 aut est vero enim officiis veritatis debitis.
               </p>
             </li>
-            <li class="faq__item">
+            <li class="faq__item" data-faq4>
               <h3 class="faq__subtitle">
                 <span class="faq__number">04</span>
                 Работает ли гарантия на международном уровне?
@@ -377,53 +377,48 @@
       </section>
       <!-- Купить -->
       <section class="buy">
-        <div class="container flex">
-          <div class="buy__content">
-            <h2 class="buy__title">bose nc 700</h2>
-            <form class="buy__form">
-              <label class="buy__label">
-                <input class="buy__radio" type="radio" name="color" checked />
-                <input class="buy__radio" type="radio" name="color" />
-              </label>
-              <label class="buy__label">
-                <a class="buy__link" href=""
-                  >Наличие в магазинах
-                  <img
-                    class="buy__icon"
-                    src="./images/arrow.svg"
-                    alt="стрелка"
-                    width="20"
-                    height="20"
-                  />
-                </a>
-                <a class="buy__link" href=""
-                  >Характеристики<img
-                    class="buy__icon"
-                    src="./images/arrow.svg"
-                    alt="стрелка"
-                    width="20"
-                    height="20"
-                /></a>
-                <a class="buy__link" href=""
-                  >Способы оплаты и доставки<img
-                    class="buy__icon"
-                    src="./images/arrow.svg"
-                    alt="стрелка"
-                    width="20"
-                    height="20"
-                /></a>
-              </label>
-              <label class="buy__label buy__label--price">14 999 UAH</label>
-              <button class="buy__button" type="submit">Заказать</button>
-            </form>
-          </div>
-          <img
-            class="buy__image"
-            src="./images/buy/img-black.jpg"
-            alt="Bose NC 700"
-            width="700"
-            height="664"
-          />
+        <div class="container">
+          <h2 class="buy__title">bose nc 700</h2>
+          <form class="buy__form">
+            <label class="buy__label buy__label--radio">
+              <input class="buy__radio" type="radio" name="color" checked />
+              <input
+                class="buy__radio buy__radio--white"
+                type="radio"
+                name="color"
+              />
+            </label>
+            <label class="buy__label">
+              <a class="buy__link" href=""
+                >Наличие в магазинах
+                <img
+                  class="buy__icon"
+                  src="./images/arrow.svg"
+                  alt="стрелка"
+                  width="20"
+                  height="20"
+                />
+              </a>
+              <a class="buy__link" href=""
+                >Характеристики<img
+                  class="buy__icon"
+                  src="./images/arrow.svg"
+                  alt="стрелка"
+                  width="20"
+                  height="20"
+              /></a>
+              <a class="buy__link" href=""
+                >Способы оплаты и доставки<img
+                  class="buy__icon"
+                  src="./images/arrow.svg"
+                  alt="стрелка"
+                  width="20"
+                  height="20"
+              /></a>
+            </label>
+            <label class="buy__label buy__label--price">14 999 UAH</label>
+            <button class="buy__button" type="submit">Заказать</button>
+          </form>
         </div>
       </section>
       <!-- Фоновое изображение -->
@@ -519,5 +514,6 @@
         >
       </div>
     </footer>
+    <script src="./js/faq.js"></script>
   </body>
 </html>

@@ -1,20 +1,22 @@
 .buy {
   @extend %section;
   padding-left: 190px;
-}
-.buy__content {
-  margin-right: 150px;
+  position: relative;
 }
 .buy__title {
   @extend %title;
   margin-bottom: 50px;
 }
 .buy__label {
-  margin-bottom: 50px;
   display: block;
+  margin-bottom: 50px;
+  max-width: 400px;
+}
+.buy__label--radio {
+  display: flex;
 }
 .buy__radio {
-  position: relative;
+  display: block;
   width: 70px;
   height: 70px;
   &:first-child {
@@ -30,13 +32,28 @@
     border: 2px solid #df3d3a;
   }
 }
+.buy__radio--white::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 85px;
+  left: 740px;
+  width: 700px;
+  height: 664px;
+  background-image: url('../../images/buy/img-black.jpg');
+}
+.buy__radio--white:checked {
+  &::after {
+    background-image: url('../../images/buy/img-white.jpg');
+  }
+}
 .buy__link {
   @extend %link;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 26px;
-  padding-bottom: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   &:first-child {
     border-top: 2px solid rgba(255, 255, 255, 0.1);
   }
@@ -48,6 +65,7 @@
   height: 20px;
 }
 .buy__label--price {
+  margin-bottom: 32px;
   font-weight: 600;
   font-size: 54px;
   line-height: 1.2;
