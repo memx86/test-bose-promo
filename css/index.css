@@ -851,11 +851,11 @@ img {
   left: 550px;
   width: 700px;
   height: 664px;
-  background-image: url("./images/buy/img-black.jpg");
+  background-image: url("../images/buy/img-black.jpg");
 }
 
 .buy__radio--white:checked::after {
-  background-image: url("./images/buy/img-white.jpg");
+  background-image: url("../images/buy/img-white.jpg");
 }
 
 .buy__link {
