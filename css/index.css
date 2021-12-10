@@ -46,7 +46,7 @@
   cursor: pointer;
 }
 
-.design, .able, .silence, .tech, .guarantee, .history, .review, .faq, .buy, .promo, .feedback, .footer {
+.hero, .design, .able, .silence, .tech, .guarantee, .history, .review, .faq, .buy, .promo, .feedback, .footer {
   padding-top: 85px;
   padding-bottom: 85px;
 }
@@ -57,6 +57,7 @@
   padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
+  outline: 1px solid red;
 }
 
 .flex {
@@ -432,17 +433,15 @@ img {
 }
 
 .hero {
-  padding-bottom: 85px;
-  padding-left: 80px;
-}
-
-.container--hero {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  padding-top: 0;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 768px;
+  background-image: url(../images/hero/hero-img.png);
+  background-position: top 0 right 0;
+  background-repeat: no-repeat;
+  background-size: 700px 598px;
 }
 
 .hero__text {
@@ -481,20 +480,18 @@ img {
 }
 
 .design {
-  padding-right: 144px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 786px;
+  background-image: url(../images/design/design-img.jpg);
+  background-position: top 85px left 0;
+  background-repeat: no-repeat;
+  background-size: 590px 616px;
 }
 
-.container--design {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.design__image {
-  margin-right: 150px;
+.design__content {
+  margin-left: 660px;
 }
 
 .design__title {
@@ -509,17 +506,17 @@ img {
   margin-bottom: 20px;
 }
 
-.able {
-  padding-left: 190px;
+.able__container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1088px;
 }
 
 .able__title {
   margin-bottom: 50px;
-  padding-left: 24px;
 }
 
 .able__content {
-  max-width: 1088px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -560,7 +557,6 @@ img {
 }
 
 .silence__list {
-  padding-left: 190px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -575,11 +571,18 @@ img {
 }
 
 .tech {
-  padding-left: 190px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 756px;
+  background-image: url(../images/tech/tech-img.jpg);
+  background-position: top 85px right 0;
+  background-repeat: no-repeat;
+  background-size: 700px 586px;
 }
 
 .tech__content {
-  margin-right: 170px;
+  width: 380px;
 }
 
 .tech__title {
@@ -590,12 +593,19 @@ img {
   margin-bottom: 20px;
 }
 
-.guarantee__image {
-  margin-right: 150px;
+.guarantee {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 735px;
+  background-image: url(../images/design/design-img.jpg), url(../../images/guarantee/Union.jpg);
+  background-position: top 85px left 0, bottom 115px right 0;
+  background-repeat: no-repeat;
+  background-size: 590px 565px, 300px 111px;
 }
 
 .guarantee__content {
-  padding-top: 25px;
+  margin-left: 660px;
 }
 
 .guarantee__title {

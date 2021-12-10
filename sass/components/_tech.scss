@@ -1,9 +1,16 @@
 .tech {
   @extend %section;
-  padding-left: 190px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 756px;
+  background-image: url(../images/tech/tech-img.jpg);
+  background-position: top 85px right 0;
+  background-repeat: no-repeat;
+  background-size: 700px 586px;
 }
 .tech__content {
-  margin-right: 170px;
+  width: 380px;
 }
 .tech__title {
   @extend %title;
