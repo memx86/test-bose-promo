@@ -1,8 +1,6 @@
 .faq {
   @extend %section;
-}
-.container--faq {
-  max-width: 1060px;
+  padding-left: 110px;
 }
 .faq__title {
   @extend %title;
@@ -10,6 +8,7 @@
 }
 .faq__list {
   @extend %list;
+  max-width: 1060px;
 }
 .faq__item {
   &:not(:last-child) {

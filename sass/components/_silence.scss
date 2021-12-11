@@ -1,5 +1,6 @@
 .silence {
   @extend %section;
+  padding-left: 110px;
   background-image: url(../images/silence/img.jpg);
   background-repeat: no-repeat;
   background-position: top 200px left 50%;
@@ -19,6 +20,7 @@
   display: flex;
 }
 .silence__item {
+  width: 510px;
   &:not(:last-child) {
     margin-right: 40px;
   }

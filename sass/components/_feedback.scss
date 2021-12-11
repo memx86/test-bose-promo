@@ -1,5 +1,11 @@
 .feedback {
   @extend %section;
+  padding-left: 110px;
+}
+.feedback__container {
+  margin-left: 0;
+  max-width: 1060px;
+  display: flex;
 }
 .feedback__content {
   margin-right: 150px;

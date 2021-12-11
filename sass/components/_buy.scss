@@ -1,8 +1,6 @@
 .buy {
   @extend %section;
-  padding-left: 190px;
-}
-.container--buy {
+  padding-left: 110px;
   position: relative;
 }
 .buy__title {
@@ -38,8 +36,8 @@
   content: '';
   display: block;
   position: absolute;
-  top: 0;
-  left: 550px;
+  top: 85px;
+  left: 720px;
   width: 700px;
   height: 664px;
   background-image: url('../images/buy/img-black.jpg');

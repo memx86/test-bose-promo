@@ -1,15 +1,23 @@
 .history {
   @extend %section;
-  padding-left: 190px;
+  padding-left: 110px;
 }
 .history__thumb {
+  position: relative;
   display: flex;
   &:not(:last-child) {
     margin-bottom: 40px;
   }
 }
 .history__content {
-  margin-right: 150px;
+  width: 400px;
+}
+.history__img {
+  position: absolute;
+  top: 0;
+  left: 615px;
+  width: 700px;
+  height: 628px;
 }
 .history__title {
   @extend %title;
@@ -21,7 +29,7 @@
     margin-bottom: 16px;
   }
 }
-.history__image--quote {
+.history__image {
   padding-top: 110px;
   margin-right: 260px;
 }

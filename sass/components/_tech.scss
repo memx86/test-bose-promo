@@ -1,8 +1,6 @@
 .tech {
   @extend %section;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-left: 110px;
   min-height: 756px;
   background-image: url(../images/tech/tech-img.jpg);
   background-position: top 85px right 0;

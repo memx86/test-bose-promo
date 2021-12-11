@@ -1,10 +1,17 @@
 .review {
   @extend %section;
+  position: relative;
 }
 .review__video {
-  margin-right: 150px;
-  min-width: 920px;
-  max-height: 590px;
+  position: absolute;
+  left: 0;
+  top: 85px;
+  width: 920px;
+  height: 590px;
+}
+.review__content {
+  margin-left: auto;
+  width: 258px;
 }
 .review__title {
   @extend %title;
