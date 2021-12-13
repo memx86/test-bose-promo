@@ -29,7 +29,7 @@
   border-radius: 50%;
   transition: background-color 250ms linear;
   cursor: pointer;
-  //второй кружок цвета
+  //второй кружок цвета, смена цвета по клику
   &::before {
     content: '';
     position: absolute;
@@ -48,7 +48,7 @@
       background-color: #101010;
     }
   }
-  // картинка наушников
+  // картинка наушников, смена картинки по клику
   &::after {
     content: '';
     display: block;
