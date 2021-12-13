@@ -95,18 +95,17 @@
   min-width: 400px;
   min-height: 68px;
   color: $button-text-color;
+  background-color: $accent-color;
   background-image: linear-gradient(
     to right,
     transparent 50%,
-    $accent-color 50%
+    $hover-color 50%
   );
-  background-color: $accent-color;
   background-size: 200% 100%;
   transition: background-position 300ms cubic-bezier(0.19, 1, 0.22, 1) 100ms,
     color 500ms ease 0ms, background-color 500ms ease;
   &:hover,
   &:focus {
     background-position: -100% 100%;
-    background-color: $hover-color;
   }
 }
