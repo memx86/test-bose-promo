@@ -58,6 +58,7 @@
     width: 700px;
     height: 664px;
     background-image: url('../images/buy/img-black.jpg');
+    transition: background-image 250ms linear;
   }
   &:checked::after {
     background-image: url('../images/buy/img-white.jpg');

@@ -906,6 +906,8 @@ img {
   width: 700px;
   height: 664px;
   background-image: url("../images/buy/img-black.jpg");
+  -webkit-transition: background-image 250ms linear;
+  transition: background-image 250ms linear;
 }
 
 .buy__color:checked::after {
