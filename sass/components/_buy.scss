@@ -1,7 +1,6 @@
 .buy {
   @extend %section;
   padding-left: 110px;
-  position: relative;
 }
 .buy__title {
   @extend %title;
@@ -12,10 +11,11 @@
   margin-bottom: 50px;
   max-width: 400px;
 }
-.buy__label--radio {
+.buy__label--color {
   display: flex;
 }
-.buy__radio {
+.buy__color {
+  position: relative;
   display: block;
   width: 70px;
   height: 70px;
@@ -24,26 +24,42 @@
   }
   outline: none;
   appearance: none;
-  background-color: #dbdbdb;
+  background-color: #101010;
+  border: 2px solid #df3d3a;
   border-radius: 50%;
+  transition: background-color 250ms linear;
   cursor: pointer;
-  &:checked {
-    background-color: #101010;
+  //второй кружок цвета
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 90px;
+    width: 70px;
+    height: 70px;
+    background-color: #dbdbdb;
     border: 2px solid #df3d3a;
+    border-radius: 50%;
+    transition: background-color 250ms linear;
   }
-}
-.buy__radio--white::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 85px;
-  left: 720px;
-  width: 700px;
-  height: 664px;
-  background-image: url('../images/buy/img-black.jpg');
-}
-.buy__radio--white:checked {
+  &:checked {
+    background-color: #dbdbdb;
+    &::before {
+      background-color: #101010;
+    }
+  }
+  // картинка наушников
   &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -110px;
+    left: 570px;
+    width: 700px;
+    height: 664px;
+    background-image: url('../images/buy/img-black.jpg');
+  }
+  &:checked::after {
     background-image: url('../images/buy/img-white.jpg');
   }
 }
