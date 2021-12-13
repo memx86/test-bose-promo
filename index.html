@@ -339,30 +339,22 @@
             <label class="buy__label">
               <a class="buy__link" href=""
                 >Наличие в магазинах
-                <img
-                  class="buy__icon"
-                  src="./images/arrow.svg"
-                  alt="стрелка"
-                  width="20"
-                  height="20"
-                />
+                <svg class="buy__icon" width="20" height="20">
+                  <use href="images/sprite.svg#arrow"></use>
+                </svg>
               </a>
               <a class="buy__link" href=""
-                >Характеристики<img
-                  class="buy__icon"
-                  src="./images/arrow.svg"
-                  alt="стрелка"
-                  width="20"
-                  height="20"
-              /></a>
+                >Характеристики
+                <svg class="buy__icon" width="20" height="20">
+                  <use href="images/sprite.svg#arrow"></use>
+                </svg>
+              </a>
               <a class="buy__link" href=""
-                >Способы оплаты и доставки<img
-                  class="buy__icon"
-                  src="./images/arrow.svg"
-                  alt="стрелка"
-                  width="20"
-                  height="20"
-              /></a>
+                >Способы оплаты и доставки
+                <svg class="buy__icon" width="20" height="20">
+                  <use href="images/sprite.svg#arrow"></use>
+                </svg>
+              </a>
             </label>
             <label class="buy__label buy__label--price">14 999 UAH</label>
             <button class="buy__button" type="submit">Заказать</button>
@@ -380,13 +372,14 @@
               Мы поможем подобрать вам подходящие наушники
             </p>
           </div>
-          <form class="feedback__form">
+          <form class="feedback__form" method="post" autocomplete="off">
             <label class="feedback__label">
               <input
                 class="feedback__input"
                 type="text"
                 name="name"
                 placeholder="Ваше имя"
+                required
               />
             </label>
             <label class="feedback__label">
@@ -395,6 +388,7 @@
                 type="email"
                 name="email"
                 placeholder="Ваш e-mail"
+                required
               />
             </label>
             <label class="feedback__label feedback__label--textarea">
@@ -402,6 +396,7 @@
                 class="feedback__input feedback__input--textarea"
                 name="message"
                 placeholder="Напишите нам сообщение"
+                required
               ></textarea>
             </label>
             <label class="feedback__label feedback__label--accept">
@@ -410,7 +405,11 @@
                 name="accept"
                 type="checkbox"
                 required
-              />I agree to the
+              />
+              <svg class="feedback__icon" width="31" height="32">
+                <use href="./images/sprite.svg#check"></use>
+              </svg>
+              I agree to the
               <a
                 class="feedback__link"
                 href=""

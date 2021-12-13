@@ -1004,11 +1004,23 @@ img {
   width: 100%;
   padding-top: 17px;
   padding-bottom: 17px;
+  color: rgba(255, 255, 255, 0.8);
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
   background-color: transparent;
+  -webkit-transition: border-bottom-color 250ms linear;
+  transition: border-bottom-color 250ms linear;
+}
+
+.feedback__input:focus {
+  outline: none;
+  border-bottom-color: #df3d3a;
+}
+
+.feedback__input:invalid {
+  color: #df3d3a;
 }
 
 .feedback__label--textarea {
@@ -1021,6 +1033,7 @@ img {
 }
 
 .feedback__label--accept {
+  position: relative;
   margin-bottom: 89px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1040,38 +1053,23 @@ img {
           appearance: none;
   background-color: transparent;
   border: 2px solid #e9edfa;
-  -webkit-transition: background-color 250ms linear;
-  transition: background-color 250ms linear;
 }
 
-.feedback__accept::before, .feedback__accept::after {
-  content: '';
+.feedback__icon {
   position: absolute;
-  left: -2px;
-  top: 50%;
-  width: 30px;
-  height: 1px;
-  background-color: transparent;
-  -webkit-transition: background-color 250ms linear, -webkit-transform 250ms linear;
-  transition: background-color 250ms linear, -webkit-transform 250ms linear;
-  transition: background-color 250ms linear, transform 250ms linear;
-  transition: background-color 250ms linear, transform 250ms linear, -webkit-transform 250ms linear;
+  top: -4px;
+  left: 0;
+  width: 31px;
+  height: 32px;
+  color: #df3d3a;
+  fill: currentColor;
+  opacity: 0;
+  -webkit-transition: opacity 250ms linear;
+  transition: opacity 250ms linear;
 }
 
-.feedback__accept:checked {
-  background-color: #df3d3a;
-}
-
-.feedback__accept:checked::before {
-  background-color: #e9edfa;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.feedback__accept:checked::after {
-  background-color: #e9edfa;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+.feedback__accept:checked + .feedback__icon {
+  opacity: 1;
 }
 
 .feedback__link {

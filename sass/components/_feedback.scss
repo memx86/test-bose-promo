@@ -26,11 +26,20 @@
   width: 100%;
   padding-top: 17px;
   padding-bottom: 17px;
+  color: $main-text-color;
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 2px solid rgba(255, 255, 255, 0.1);
   background-color: transparent;
+  transition: border-bottom-color 250ms linear;
+  &:focus {
+    outline: none;
+    border-bottom-color: $accent-color;
+  }
+  &:invalid {
+    color: $accent-color;
+  }
 }
 .feedback__label--textarea {
   margin-bottom: 53px;
@@ -40,6 +49,7 @@
   resize: none;
 }
 .feedback__label--accept {
+  position: relative;
   margin-bottom: 89px;
   display: flex;
   align-items: center;
@@ -52,29 +62,20 @@
   appearance: none;
   background-color: transparent;
   border: 2px solid #e9edfa;
-  transition: background-color 250ms linear;
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    left: -2px;
-    top: 50%;
-    width: 30px;
-    height: 1px;
-    background-color: transparent;
-    transition: background-color 250ms linear, transform 250ms linear;
-  }
-  &:checked {
-    background-color: $accent-color;
-    &::before {
-      background-color: #e9edfa;
-      transform: rotate(45deg);
-    }
-    &::after {
-      background-color: #e9edfa;
-      transform: rotate(-45deg);
-    }
-  }
+}
+.feedback__icon {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 31px;
+  height: 32px;
+  color: $accent-color;
+  fill: currentColor;
+  opacity: 0;
+  transition: opacity 250ms linear;
+}
+.feedback__accept:checked + .feedback__icon {
+  opacity: 1;
 }
 .feedback__link {
   margin-left: 5px;
