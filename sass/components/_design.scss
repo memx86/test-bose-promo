@@ -1,18 +1,49 @@
 .design {
   @extend %section;
-  min-height: 786px;
-  background-image: url(../images/design/design-img.jpg);
-  background-position: top 85px right calc(50% + 390px);
-  background-repeat: no-repeat;
-  background-size: 590px 616px;
+  &::after {
+    content: '';
+    display: block;
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 280px;
+    height: 293px;
+    background-image: url(../images/design/design-img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  @include mq(tablet) {
+    &::after {
+      display: none;
+    }
+    min-height: 668px;
+    background-image: url(../images/design/design-img.jpg);
+    background-position: top 50px right calc(50% + 177px + 30px);
+    background-repeat: no-repeat;
+    background-size: 354px 568px;
+  }
+  @include mq(desktop) {
+    min-height: 786px;
+    background-image: url(../images/design/design-img.jpg);
+    background-position: top 85px right calc(50% + 295px + 95px);
+    background-size: 590px 616px;
+  }
 }
 .design__content {
   margin-left: auto;
-  max-width: 557px;
+  @include mq(tablet-only) {
+    max-width: 294px;
+  }
+  @include mq(desktop) {
+    max-width: 557px;
+  }
 }
 .design__title {
   @extend %title;
-  margin-bottom: 50px;
+  margin-bottom: 32px;
+  @include mq(desktop) {
+    margin-bottom: 50px;
+  }
 }
 .design__list {
   @extend %list;
@@ -20,10 +51,16 @@
 }
 .design__item {
   &:not(:last-child) {
-    margin-bottom: 40px;
+    margin-bottom: 24px;
+    @include mq(desktop) {
+      margin-bottom: 40px;
+    }
   }
 }
 .design__subtitle {
   @extend %subtitle;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  @include mq(desktop) {
+    margin-bottom: 20px;
+  }
 }

@@ -2,8 +2,11 @@
   @extend %section;
   padding-top: 0;
   @include mq(tablet) {
-    min-height: 768px;
+    min-height: 459px;
     position: relative;
+  }
+  @include mq(desktop) {
+    min-height: 768px;
   }
 }
 .hero__text {

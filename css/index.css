@@ -393,10 +393,23 @@ summary {
 body {
   color: rgba(255, 255, 255, 0.8);
   font-family: Gilroy, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, roboto, Ubuntu, noto, arial, sans-serif;
-  font-size: 20px;
-  line-height: 1.45;
+  font-size: 14px;
+  line-height: 1.25;
   background-color: #191919;
   counter-reset: section;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    font-size: 20px;
+  }
 }
 
 body.modal-open {
@@ -612,8 +625,14 @@ img {
 
 @media (min-width: 768px) {
   .hero {
-    min-height: 768px;
+    min-height: 459px;
     position: relative;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero {
+    min-height: 768px;
   }
 }
 
@@ -729,21 +748,65 @@ img {
   }
 }
 
-.design {
-  min-height: 786px;
+.design::after {
+  content: '';
+  display: block;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 280px;
+  height: 293px;
   background-image: url(../images/design/design-img.jpg);
-  background-position: top 85px right calc(50% + 390px);
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 590px 616px;
+}
+
+@media (min-width: 768px) {
+  .design {
+    min-height: 668px;
+    background-image: url(../images/design/design-img.jpg);
+    background-position: top 50px right calc(50% + 177px + 30px);
+    background-repeat: no-repeat;
+    background-size: 354px 568px;
+  }
+  .design::after {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .design {
+    min-height: 786px;
+    background-image: url(../images/design/design-img.jpg);
+    background-position: top 85px right calc(50% + 295px + 95px);
+    background-size: 590px 616px;
+  }
 }
 
 .design__content {
   margin-left: auto;
-  max-width: 557px;
+}
+
+@media (min-width: 768px) and (max-width: 1439.98px) {
+  .design__content {
+    max-width: 294px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .design__content {
+    max-width: 557px;
+  }
 }
 
 .design__title {
-  margin-bottom: 50px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 1440px) {
+  .design__title {
+    margin-bottom: 50px;
+  }
 }
 
 .design__list {
@@ -751,11 +814,23 @@ img {
 }
 
 .design__item:not(:last-child) {
-  margin-bottom: 40px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 1440px) {
+  .design__item:not(:last-child) {
+    margin-bottom: 40px;
+  }
 }
 
 .design__subtitle {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 1440px) {
+  .design__subtitle {
+    margin-bottom: 20px;
+  }
 }
 
 .able__container {

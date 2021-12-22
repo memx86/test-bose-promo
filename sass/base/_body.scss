@@ -2,8 +2,15 @@ body {
   color: $main-text-color;
   font-family: Gilroy, -apple-system, BlinkMacSystemFont, avenir next, avenir,
     segoe ui, helvetica neue, helvetica, roboto, Ubuntu, noto, arial, sans-serif;
-  font-size: 20px;
-  line-height: 1.45;
+  font-size: 14px;
+  line-height: 1.25;
+  @include mq(tablet) {
+    font-size: 16px;
+    line-height: 1.45;
+  }
+  @include mq(desktop) {
+    font-size: 20px;
+  }
   background-color: $main-bg-color;
   counter-reset: section;
   &.modal-open {
