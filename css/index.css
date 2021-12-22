@@ -429,14 +429,8 @@ img {
 
 .hero {
   padding-top: 0;
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
   min-height: 768px;
-  background-image: url(../images/hero/hero-img.png);
-  background-position: top 0 right 0;
-  background-repeat: no-repeat;
-  background-size: 700px 598px;
+  position: relative;
 }
 
 .hero__text {
@@ -475,6 +469,12 @@ img {
 
 .hero__button:hover, .hero__button:focus {
   background-position: -100% 100%;
+}
+
+.hero__image {
+  position: absolute;
+  top: 0;
+  left: calc(50% + 20px);
 }
 
 .design {
