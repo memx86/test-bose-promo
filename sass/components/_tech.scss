@@ -1,11 +1,13 @@
 .tech {
   @extend %section;
-  padding-left: 110px;
   min-height: 756px;
   background-image: url(../images/tech/tech-img.jpg);
-  background-position: top 85px right 0;
+  background-position: top 85px left calc(50% + 370px);
   background-repeat: no-repeat;
   background-size: 700px 586px;
+}
+.tech__container {
+  padding-left: 130px;
 }
 .tech__content {
   width: 380px;
