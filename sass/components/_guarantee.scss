@@ -3,12 +3,13 @@
   min-height: 735px;
   background-image: url(../images/guarantee/guarantee-img.jpg),
     url(../../images/guarantee/Union.jpg);
-  background-position: top 85px left 0, bottom 115px right 0;
+  background-position: top 85px left calc(50% - 130px - 295px),
+    bottom 115px right calc(50% - 440px - 150px);
   background-repeat: no-repeat;
   background-size: 590px 565px, 300px 111px;
 }
 .guarantee__content {
-  margin-left: 660px;
+  margin-left: 680px;
 }
 .guarantee__title {
   @extend %title;
