@@ -16,10 +16,10 @@
   <body>
     <!-- Хедер -->
     <header class="header">
-      <div class="container">
+      <div class="container header__container">
         <nav class="header__nav">
           <a class="header__link" aria-label="Логотип Bose" href="">
-            <svg class="header__logo" width="130" height="16">
+            <svg class="header__logo" width="100" height="12">
               <use href="./images/sprite.svg#bose-logo"></use>
             </svg>
           </a>
@@ -38,6 +38,36 @@
             </li>
           </ul>
         </nav>
+        <!-- кнопка-бургер -->
+        <button
+          class="burger__button"
+          type="button"
+          aria-expanded="false"
+          data-menu-button
+        >
+          <span class="burger__item burger__item--top"></span>
+          <span class="burger__item burger__item--center"></span>
+          <span class="burger__item burger__item--bottom"></span>
+        </button>
+        <!-- мобильное меню -->
+        <div class="mobile-menu" data-menu>
+          <div class="container">
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">Характеристики</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">История</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">Отзывы</a>
+              </li>
+              <li class="mobile-menu__item">
+                <a class="mobile-menu__link" href="#">Оплата и доставка</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -61,8 +91,9 @@
           />
         </div>
       </section>
+
       <!-- Дизайн -->
-      <section class="design">
+      <!-- <section class="design">
         <div class="container">
           <div class="design__content">
             <h2 class="design__title">Премиальный дизайн и комфорт</h2>
@@ -88,9 +119,10 @@
             </ul>
           </div>
         </div>
-      </section>
+      </section> -->
+
       <!-- Способны на многое -->
-      <section class="able">
+      <!-- <section class="able">
         <div class="container able__container">
           <h2 class="able__title">Cпособны на многое</h2>
           <div class="able__content">
@@ -101,16 +133,17 @@
             </ul>
             <ul class="able__list">
               <li class="able__item">Непревзойденная система микрофонов</li>
-              <li class="able__item">Поддержка голосовых помощников</li>
-              <!-- prettier-ignore -->
-              <li class="able__item">Аудиоплатформа дополненной реальности Bose AR
+              <li class="able__item">Поддержка голосовых помощников</li> -->
+      <!-- prettier-ignore -->
+      <!--              <li class="able__item">Аудиоплатформа дополненной реальности Bose AR
               </li>
             </ul>
           </div>
         </div>
-      </section>
+      </section> -->
+
       <!-- Тишина -->
-      <section class="silence">
+      <!-- <section class="silence">
         <div class="container silence__container">
           <h2 class="silence__title">Роскошь тишины</h2>
           <ul class="silence__list">
@@ -134,9 +167,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
+
       <!-- BOSE AR  Фирменная технология-->
-      <section class="tech">
+      <!-- <section class="tech">
         <div class="container tech__container">
           <div class="tech__content">
             <h2 class="tech__title">Bose AR</h2>
@@ -149,9 +183,10 @@
             </p>
           </div>
         </div>
-      </section>
+      </section> -->
+
       <!-- Гарантии -->
-      <section class="guarantee">
+      <!-- <section class="guarantee">
         <div class="container">
           <div class="guarantee__content">
             <h2 class="guarantee__title">Гарантии</h2>
@@ -175,9 +210,10 @@
             </ul>
           </div>
         </div>
-      </section>
+      </section> -->
+
       <!-- История -->
-      <section class="history">
+      <!-- <section class="history">
         <div class="container history__container">
           <div class="history__thumb">
             <div class="history__content">
@@ -231,9 +267,10 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
+
       <!-- Обзоры -->
-      <section class="review">
+      <!-- <section class="review">
         <div class="container">
           <video
             class="review__video"
@@ -260,9 +297,10 @@
             </ul>
           </div>
         </div>
-      </section>
+      </section> -->
+
       <!-- FAQ  -->
-      <section class="faq">
+      <!-- <section class="faq">
         <div class="container faq__container">
           <h2 class="faq__title">FAQ</h2>
           <details class="faq__item">
@@ -355,9 +393,10 @@
             </p>
           </details>
         </div>
-      </section>
+      </section> -->
+
       <!-- Купить -->
-      <section class="buy">
+      <!-- <section class="buy">
         <div class="container buy__container">
           <h2 class="buy__title">bose nc 700</h2>
           <form class="buy__form">
@@ -388,9 +427,10 @@
             <button class="buy__button" type="submit">Заказать</button>
           </form>
         </div>
-      </section>
+      </section> -->
+
       <!-- Обратная связь -->
-      <section class="feedback">
+      <!-- <section class="feedback">
         <div class="container feedback__container">
           <div class="feedback__content">
             <h2 class="feedback__title">Обратная связь</h2>
@@ -449,10 +489,10 @@
             <button class="feedback__button" type="submit">Отправить</button>
           </form>
         </div>
-      </section>
+      </section> -->
     </main>
     <!-- Футер -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container container--footer">
         <ul class="footer__list">
           <li class="footer__item">
@@ -478,6 +518,7 @@
           >8 (800) 111-11-11</a
         >
       </div>
-    </footer>
+    </footer> -->
+    <script src="./js/menu.js"></script>
   </body>
 </html>

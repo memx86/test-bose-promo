@@ -1,9 +1,13 @@
-.header {
-  padding-top: 29px;
-  padding-right: 80px;
-  margin-bottom: 35px;
-  padding-left: 80px;
-  font-weight: 600;
+// .header {
+//   padding-top: 30px;
+//   margin-bottom: 35px;
+// }
+.header__container {
+  @include mq(not-desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .header__nav {
   display: flex;
@@ -12,6 +16,14 @@
 }
 .header__link {
   @extend %link;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.25;
+  @include mq(tablet) {
+    font-size: 16px;
+    line-height: 1.19;
+  }
   color: inherit;
   transition: color 250ms linear;
   &:hover,
@@ -20,25 +32,104 @@
   }
 }
 .header__logo {
-  width: 130px;
-  height: 16px;
+  width: 100px;
+  height: 12px;
+  @include mq(not-desktop) {
+    position: relative;
+    z-index: 2;
+  }
+  @include mq(desktop) {
+    width: 130px;
+    height: 16px;
+  }
   color: $title-text-color;
   fill: currentColor;
 }
 .header__list {
   @extend %list;
-  display: flex;
+  padding: 24px 20px;
+  @include mq(not-desktop) {
+    display: none;
+  }
+  @include mq(desktop) {
+    display: flex;
+  }
 }
 .header__item {
   &:not(:last-child) {
     margin-right: 77px;
   }
 }
-.header__link {
-  @extend %link;
-  padding-top: 35px;
-  padding-bottom: 35px;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.19;
+
+.burger__button {
+  display: block;
+  position: relative;
+  width: 22px;
+  height: 22px;
+  border: none;
+  padding: 0;
+  background-color: inherit;
+  cursor: pointer;
+  z-index: 2;
+  overflow: hidden;
+  @include mq(desktop) {
+    display: none;
+  }
+}
+.burger__item {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: $main-text-color;
+  transition: transform 250ms linear;
+  &:not(:last-child) {
+    margin-bottom: 3px;
+  }
+  .burger__button.is-open &--top {
+    transform: translateY(5px) rotate(45deg);
+  }
+  .burger__button.is-open &--center {
+    transform: translateX(100%);
+  }
+  .burger__button.is-open &--bottom {
+    transform: translateY(-5px) rotate(-225deg);
+  }
+}
+.mobile-menu {
+  @include mq(not-desktop) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1;
+    padding: 100px 20px 24px 20px;
+    transform: translateY(-100%);
+    background-color: $main-bg-color;
+    transition: transform 250ms linear;
+    &.is-open {
+      transform: translateY(0);
+    }
+    @include mq(mobile-only) {
+      height: 100vh;
+    }
+    @include mq(tablet-only) {
+      min-height: 367px;
+      transform: translateY(calc(-100% - 80px));
+      box-shadow: 0px 20px 80px #000000;
+    }
+  }
+  @include mq(desktop) {
+    display: none;
+  }
+}
+.mobile-menu__list {
+  @extend %list;
+}
+.mobile-menu__item {
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+.mobile-menu__link {
+  @extend .header__link;
 }
