@@ -4,7 +4,7 @@
 }
 .review__video {
   position: absolute;
-  left: 0;
+  right: calc(50% - 180px);
   top: 85px;
   width: 920px;
   height: 590px;
