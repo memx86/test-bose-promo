@@ -45,6 +45,7 @@
 .design__subtitle, .silence__subtitle, .tech__subtitle, .guarantee__subtitle, .review__subtitle, .faq__subtitle {
   font-size: 20px;
   line-height: 1.25;
+  text-transform: unset;
 }
 
 @media (min-width: 1440px) {
@@ -900,39 +901,92 @@ img {
 .silence {
   background-image: url(../images/silence/img.jpg);
   background-repeat: no-repeat;
-  background-position: top 200px left 50%;
-  background-size: 1440px 524px;
+  background-position: top calc(26px + 29px + 32px) left 50%;
+  background-size: 280px 293px;
 }
 
-.silence__container {
-  padding-left: 130px;
+@media (min-width: 768px) and (max-width: 1439.98px) {
+  .silence {
+    background-image: url(../images/silence/img.jpg);
+    background-position: top calc(50px + 36px + 32px) left 50%;
+    background-size: 768px 293px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .silence {
+    background-image: url(../images/silence/img.jpg);
+    background-position: top 200px left 50%;
+    background-size: 1440px 524px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .silence__container {
+    padding-left: 130px;
+  }
 }
 
 .silence__title {
-  text-align: right;
-  margin-bottom: 624px;
+  margin-bottom: 357px;
+}
+
+@media (min-width: 768px) {
+  .silence__title {
+    text-align: right;
+  }
+}
+
+@media (min-width: 1440px) {
+  .silence__title {
+    margin-bottom: 624px;
+  }
 }
 
 .silence__image {
   margin-bottom: 50px;
 }
 
-.silence__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media (min-width: 768px) {
+  .silence__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
-.silence__item {
-  width: 510px;
+@media (max-width: 767.98px) {
+  .silence__item:not(:last-child) {
+    margin-bottom: 24px;
+  }
 }
 
-.silence__item:not(:last-child) {
-  margin-right: 40px;
+@media (min-width: 768px) and (max-width: 1439.98px) {
+  .silence__item {
+    width: 294px;
+  }
+  .silence__item:not(:last-child) {
+    margin-right: 60px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .silence__item {
+    width: 510px;
+  }
+  .silence__item:not(:last-child) {
+    margin-right: 40px;
+  }
 }
 
 .silence__subtitle {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 1440px) {
+  .silence__subtitle {
+    margin-bottom: 20px;
+  }
 }
 
 .tech {
