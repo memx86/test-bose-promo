@@ -3,19 +3,32 @@
   position: relative;
 }
 .review__video {
-  position: absolute;
-  right: calc(50% - 180px);
-  top: 85px;
-  width: 920px;
-  height: 590px;
+  margin-bottom: 32px;
+  @include mq(tablet-only) {
+    width: 648px;
+    height: 417px;
+  }
+  @include mq(desktop) {
+    margin-bottom: unset;
+    position: absolute;
+    right: calc(50% - 180px);
+    top: 85px;
+    width: 920px;
+    height: 590px;
+  }
 }
 .review__content {
-  margin-left: auto;
-  width: 258px;
+  @include mq(desktop) {
+    margin-left: auto;
+    width: 258px;
+  }
 }
 .review__title {
   @extend %title;
-  margin-bottom: 50px;
+  margin-bottom: 32px;
+  @include mq(desktop) {
+    margin-bottom: 50px;
+  }
 }
 .review__subtitle {
   @extend %subtitle;
@@ -23,7 +36,10 @@
   color: $accent-color;
 }
 .review__text {
-  margin-bottom: 70px;
+  margin-bottom: 32px;
+  @include mq(desktop) {
+    margin-bottom: 70px;
+  }
 }
 .review__list {
   @extend %list;
@@ -31,19 +47,28 @@
   font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont,
     avenir next, avenir, segoe ui, helvetica neue, helvetica, roboto, Ubuntu,
     noto, arial, sans-serif;
-  font-size: 28px;
+  font-size: 20px;
   line-height: 1.25;
   color: $accent-color;
+  @include mq(desktop) {
+    font-size: 28px;
+  }
 }
 .review__item {
-  margin-right: 12px;
+  margin-right: 14px;
   &:not(:last-child)::after {
     content: '-';
-    margin-left: 12px;
+    margin-left: 20px;
   }
   opacity: 0.2;
   transition: opacity 250ms linear;
   &.active {
     opacity: 1;
+  }
+  @include mq(desktop) {
+    margin-right: 12px;
+    &:not(:last-child)::after {
+      margin-left: 12px;
+    }
   }
 }

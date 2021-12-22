@@ -1387,20 +1387,42 @@ main {
 }
 
 .review__video {
-  position: absolute;
-  right: calc(50% - 180px);
-  top: 85px;
-  width: 920px;
-  height: 590px;
+  margin-bottom: 32px;
 }
 
-.review__content {
-  margin-left: auto;
-  width: 258px;
+@media (min-width: 768px) and (max-width: 1439.98px) {
+  .review__video {
+    width: 648px;
+    height: 417px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .review__video {
+    margin-bottom: unset;
+    position: absolute;
+    right: calc(50% - 180px);
+    top: 85px;
+    width: 920px;
+    height: 590px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .review__content {
+    margin-left: auto;
+    width: 258px;
+  }
 }
 
 .review__title {
-  margin-bottom: 50px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 1440px) {
+  .review__title {
+    margin-bottom: 50px;
+  }
 }
 
 .review__subtitle {
@@ -1409,7 +1431,13 @@ main {
 }
 
 .review__text {
-  margin-bottom: 70px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 1440px) {
+  .review__text {
+    margin-bottom: 70px;
+  }
 }
 
 .review__list {
@@ -1417,13 +1445,19 @@ main {
   display: -ms-flexbox;
   display: flex;
   font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, roboto, Ubuntu, noto, arial, sans-serif;
-  font-size: 28px;
+  font-size: 20px;
   line-height: 1.25;
   color: #df3d3a;
 }
 
+@media (min-width: 1440px) {
+  .review__list {
+    font-size: 28px;
+  }
+}
+
 .review__item {
-  margin-right: 12px;
+  margin-right: 14px;
   opacity: 0.2;
   -webkit-transition: opacity 250ms linear;
   transition: opacity 250ms linear;
@@ -1431,11 +1465,20 @@ main {
 
 .review__item:not(:last-child)::after {
   content: '-';
-  margin-left: 12px;
+  margin-left: 20px;
 }
 
 .review__item.active {
   opacity: 1;
+}
+
+@media (min-width: 1440px) {
+  .review__item {
+    margin-right: 12px;
+  }
+  .review__item:not(:last-child)::after {
+    margin-left: 12px;
+  }
 }
 
 .faq__container {
