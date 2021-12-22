@@ -46,7 +46,7 @@
   cursor: pointer;
 }
 
-.hero, .design, .able, .silence, .tech, .guarantee, .history, .review, .faq, .buy, .promo, .feedback, .footer {
+.hero, .design, .able, .silence, .tech, .guarantee, .history, .review, .faq, .buy, .feedback, .footer {
   padding-top: 85px;
   padding-bottom: 85px;
 }
@@ -643,8 +643,8 @@ img {
   padding-top: 446px;
 }
 
-.history {
-  padding-left: 110px;
+.history__container {
+  padding-left: 130px;
 }
 
 .history__thumb {
@@ -665,7 +665,7 @@ img {
 .history__img {
   position: absolute;
   top: 0;
-  left: 615px;
+  left: 550px;
   width: 700px;
   height: 628px;
 }
@@ -825,8 +825,20 @@ img {
   padding: 0 62px;
 }
 
-.buy {
-  padding-left: 110px;
+.buy::after {
+  content: '';
+  margin-top: 170px;
+  display: block;
+  width: 100%;
+  height: 524px;
+  background-image: url(../images/buy/promo-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1440px 524px;
+}
+
+.buy__container {
+  padding-left: 130px;
 }
 
 .buy__title {
@@ -893,7 +905,7 @@ img {
   display: block;
   position: absolute;
   top: -110px;
-  left: 570px;
+  left: 540px;
   width: 700px;
   height: 664px;
   background-image: url("../images/buy/img-black.jpg");
@@ -954,14 +966,6 @@ img {
 
 .buy__button:hover, .buy__button:focus {
   background-position: -100% 100%;
-}
-
-.promo {
-  height: 694px;
-  background-image: url(../images/promo/promo-bg.jpg);
-  background-position: top 85px left 50%;
-  background-repeat: no-repeat;
-  background-size: 1440px 524px;
 }
 
 .feedback {
