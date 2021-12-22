@@ -1,22 +1,58 @@
 .tech {
   @extend %section;
-  min-height: 756px;
-  background-image: url(../images/tech/tech-img.jpg);
-  background-position: top 85px left calc(50% + 370px);
-  background-repeat: no-repeat;
-  background-size: 700px 586px;
+  &::after {
+    content: '';
+    display: block;
+    margin-top: 32px;
+    width: 280px;
+    height: 235px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../images/tech/tech-img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  @include mq(tablet) {
+    &::after {
+      display: none;
+    }
+    background-repeat: no-repeat;
+    background-image: url(../images/tech/tech-img.jpg);
+    background-position: top 50px left calc(50% + 177px + 30px);
+    background-size: 354px 297px;
+  }
+
+  @include mq(desktop) {
+    min-height: 756px;
+    background-image: url(../images/tech/tech-img.jpg);
+    background-position: top 85px left calc(50% + 350px + 20px);
+    background-size: 700px 586px;
+  }
 }
 .tech__container {
-  padding-left: 130px;
+  @include mq(desktop) {
+    padding-left: 130px;
+  }
 }
 .tech__content {
-  width: 380px;
+  @include mq(tablet-only) {
+    width: 294px;
+  }
+  @include mq(desktop) {
+    width: 380px;
+  }
 }
 .tech__title {
   @extend %title;
-  margin-bottom: 50px;
+  margin-bottom: 32px;
+  @include mq(desktop) {
+    margin-bottom: 50px;
+  }
 }
 .tech__subtitle {
   @extend %subtitle;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  @include mq(desktop) {
+    margin-bottom: 20px;
+  }
 }
