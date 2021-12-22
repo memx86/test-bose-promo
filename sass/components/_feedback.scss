@@ -2,28 +2,51 @@
   @extend %section;
 }
 .feedback__container {
-  max-width: 1100px;
-  display: flex;
+  @include mq(desktop) {
+    max-width: 1100px;
+    display: flex;
+  }
 }
 .feedback__content {
-  margin-right: 150px;
+  @include mq(desktop) {
+    margin-right: 150px;
+  }
 }
 .feedback__title {
   @extend %title;
-  margin-bottom: 50px;
+  margin-bottom: 32px;
+
+  @include mq(desktop) {
+    margin-bottom: 50px;
+  }
+}
+.feedback__text {
+  margin-bottom: 24px;
+  font-size: 16px;
+  @include mq(tablet) {
+    font-size: 20px;
+  }
+  @include mq(tablet-only) {
+    margin-bottom: 36px;
+  }
 }
 .feedback__form {
-  min-width: 510px;
+  @include mq(desktop) {
+    min-width: 510px;
+  }
 }
 .feedback__label {
   display: block;
-  margin-bottom: 42px;
-  line-height: 0.7;
+  margin-bottom: 16px;
+  font-size: 16px;
+  @include mq(desktop) {
+    margin-bottom: 42px;
+  }
 }
 .feedback__input {
   width: 100%;
-  padding-top: 17px;
-  padding-bottom: 17px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   color: $main-text-color;
   border-top: none;
   border-left: none;
@@ -40,17 +63,31 @@
   }
 }
 .feedback__label--textarea {
-  margin-bottom: 53px;
+  margin-bottom: 40px;
+  @include mq(desktop) {
+    margin-bottom: 53px;
+  }
 }
 .feedback__input--textarea {
-  min-height: 120px;
+  min-height: 96px;
+  @include mq(desktop) {
+    min-height: 120px;
+  }
   resize: none;
 }
 .feedback__label--accept {
   position: relative;
-  margin-bottom: 89px;
+  margin-bottom: 45px;
   display: flex;
   align-items: center;
+  font-size: 14px;
+  @include mq(tablet-only) {
+    margin-bottom: 52px;
+  }
+  @include mq(desktop) {
+    margin-bottom: 89px;
+    // font-size: 20px;
+  }
 }
 .feedback__custom {
   position: relative;
@@ -84,12 +121,19 @@
 }
 .feedback__button {
   @extend %button;
-  min-width: 510px;
-  min-height: 68px;
+  min-width: 280px;
+  min-height: 58px;
   position: relative;
   color: $button-text-color;
   background-color: transparent;
   border: 1px solid $accent-color;
+  @include mq(tablet-only) {
+    min-width: 294px;
+  }
+  @include mq(desktop) {
+    min-width: 510px;
+    min-height: 68px;
+  }
   transition: color 0.25s;
   &::before,
   &::after {
