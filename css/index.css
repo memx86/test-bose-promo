@@ -433,6 +433,10 @@ img {
   height: auto;
 }
 
+main {
+  overflow: hidden;
+}
+
 @media (max-width: 1439.98px) {
   .header__container {
     display: -webkit-box;
@@ -1062,19 +1066,65 @@ img {
 }
 
 .guarantee {
-  min-height: 735px;
-  background-image: url(../images/guarantee/guarantee-img.jpg), url(../../images/guarantee/Union.jpg);
-  background-position: top 85px left calc(50% - 130px - 295px), bottom 115px right calc(50% - 440px - 150px);
-  background-repeat: no-repeat;
-  background-size: 590px 565px, 300px 111px;
+  position: relative;
 }
 
-.guarantee__content {
-  margin-left: 680px;
+.guarantee::after {
+  content: '';
+  display: block;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 280px;
+  height: 268px;
+  background-repeat: no-repeat;
+  background-image: url(../images/guarantee/guarantee-img.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .guarantee {
+    background-repeat: no-repeat;
+    background-image: url(../images/guarantee/guarantee-img.jpg);
+    background-position: top 50px left calc(50% - 60px - 177px);
+    background-size: 354px 442px;
+  }
+  .guarantee::after {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .guarantee {
+    min-height: 735px;
+    background-image: url(../images/guarantee/guarantee-img.jpg);
+    background-position: top 85px left calc(50% - 130px - 295px);
+    background-size: 590px 565px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1439.98px) {
+  .guarantee__content {
+    margin-left: auto;
+    max-width: 294px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .guarantee__content {
+    margin-left: 680px;
+  }
 }
 
 .guarantee__title {
-  margin-bottom: 50px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 1440px) {
+  .guarantee__title {
+    margin-bottom: 50px;
+  }
 }
 
 .guarantee__list {
@@ -1082,7 +1132,13 @@ img {
 }
 
 .guarantee__item:not(:last-child) {
-  margin-bottom: 40px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 1440px) {
+  .guarantee__item:not(:last-child) {
+    margin-bottom: 40px;
+  }
 }
 
 .guarantee__item::before {
@@ -1102,6 +1158,27 @@ img {
 .guarantee__icon {
   display: block;
   padding-top: 446px;
+}
+
+.guarantee__union {
+  position: absolute;
+  bottom: -132px;
+  left: calc(50% + 35px);
+}
+
+@media (min-width: 768px) and (max-width: 1439.98px) {
+  .guarantee__union {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .guarantee__union {
+    width: 300px;
+    height: 111px;
+    bottom: 85px;
+    left: calc(50% + 40px + 400px + 40px);
+  }
 }
 
 .history__container {

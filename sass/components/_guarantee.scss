@@ -1,19 +1,50 @@
 .guarantee {
   @extend %section;
-  min-height: 735px;
-  background-image: url(../images/guarantee/guarantee-img.jpg),
-    url(../../images/guarantee/Union.jpg);
-  background-position: top 85px left calc(50% - 130px - 295px),
-    bottom 115px right calc(50% - 440px - 150px);
-  background-repeat: no-repeat;
-  background-size: 590px 565px, 300px 111px;
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 280px;
+    height: 268px;
+    background-repeat: no-repeat;
+    background-image: url(../images/guarantee/guarantee-img.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  @include mq(tablet) {
+    &::after {
+      display: none;
+    }
+    background-repeat: no-repeat;
+    background-image: url(../images/guarantee/guarantee-img.jpg);
+    background-position: top 50px left calc(50% - 60px - 177px);
+    background-size: 354px 442px;
+  }
+  @include mq(desktop) {
+    min-height: 735px;
+    background-image: url(../images/guarantee/guarantee-img.jpg);
+    background-position: top 85px left calc(50% - 130px - 295px);
+    background-size: 590px 565px;
+  }
 }
 .guarantee__content {
-  margin-left: 680px;
+  @include mq(tablet-only) {
+    margin-left: auto;
+    max-width: 294px;
+  }
+  @include mq(desktop) {
+    margin-left: 680px;
+  }
 }
 .guarantee__title {
   @extend %title;
-  margin-bottom: 50px;
+  margin-bottom: 32px;
+  @include mq(desktop) {
+    margin-bottom: 50px;
+  }
 }
 .guarantee__list {
   @extend %list;
@@ -21,7 +52,12 @@
 }
 .guarantee__item {
   &:not(:last-child) {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
+  }
+  @include mq(desktop) {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
   }
   &::before {
     content: '';
@@ -40,4 +76,19 @@
 .guarantee__icon {
   display: block;
   padding-top: 446px;
+}
+
+.guarantee__union {
+  position: absolute;
+  bottom: -132px;
+  left: calc(50% + 35px);
+  @include mq(tablet-only) {
+    display: none;
+  }
+  @include mq(desktop) {
+    width: 300px;
+    height: 111px;
+    bottom: 85px;
+    left: calc(50% + 40px + 400px + 40px);
+  }
 }
