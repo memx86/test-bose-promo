@@ -427,14 +427,16 @@
             </label>
             <label class="feedback__label feedback__label--accept">
               <input
-                class="feedback__accept"
+                class="feedback__accept visually-hidden"
                 name="accept"
                 type="checkbox"
                 required
               />
-              <svg class="feedback__icon" width="31" height="32">
-                <use href="./images/sprite.svg#check"></use>
-              </svg>
+              <span class="feedback__custom">
+                <svg class="feedback__icon" width="26" height="22">
+                  <use href="./images/sprite.svg#check"></use>
+                </svg>
+              </span>
               I agree to the
               <a
                 class="feedback__link"

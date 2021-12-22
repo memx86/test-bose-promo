@@ -1,10 +1,8 @@
 .feedback {
   @extend %section;
-  padding-left: 110px;
 }
 .feedback__container {
-  margin-left: 0;
-  max-width: 1060px;
+  max-width: 1100px;
   display: flex;
 }
 .feedback__content {
@@ -54,29 +52,27 @@
   display: flex;
   align-items: center;
 }
-.feedback__accept {
+.feedback__custom {
   position: relative;
-  margin-right: 29px;
   width: 30px;
-  height: 28px;
-  appearance: none;
-  background-color: transparent;
-  border: 2px solid #e9edfa;
+  height: 30px;
+  border: 2px solid currentColor;
+  margin-right: 29px;
 }
 .feedback__icon {
   position: absolute;
-  top: -4px;
-  left: 0;
-  width: 31px;
-  height: 32px;
+  top: -5px;
+  left: 4px;
   color: $accent-color;
-  fill: currentColor;
+  stroke: currentColor;
+  fill: transparent;
   opacity: 0;
   transition: opacity 250ms linear;
+  .feedback__accept:checked + .feedback__custom & {
+    opacity: 1;
+  }
 }
-.feedback__accept:checked + .feedback__icon {
-  opacity: 1;
-}
+
 .feedback__link {
   margin-left: 5px;
   color: inherit;
@@ -94,12 +90,6 @@
   color: $button-text-color;
   background-color: transparent;
   border: 1px solid $accent-color;
-  // transition: border-color 250ms linear, color 250ms linear;
-  // &:hover,
-  // &:focus {
-  //   color: $hover-color;
-  //   border-color: $main-text-color;
-  // }
   transition: color 0.25s;
   &::before,
   &::after {
@@ -114,11 +104,11 @@
     height: 0;
     border: 2px solid transparent;
   }
-  // And this the bottom & left borders (expands left, then up)
   &:hover {
     color: $hover-color;
     border-color: transparent;
   }
+  // And this the bottom & left borders (expands left, then up)
   // Hover styles
   &:hover::before,
   &:hover::after {

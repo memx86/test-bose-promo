@@ -968,13 +968,8 @@ img {
   background-position: -100% 100%;
 }
 
-.feedback {
-  padding-left: 110px;
-}
-
 .feedback__container {
-  margin-left: 0;
-  max-width: 1060px;
+  max-width: 1100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1041,32 +1036,27 @@ img {
           align-items: center;
 }
 
-.feedback__accept {
+.feedback__custom {
   position: relative;
-  margin-right: 29px;
   width: 30px;
-  height: 28px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  background-color: transparent;
-  border: 2px solid #e9edfa;
+  height: 30px;
+  border: 2px solid currentColor;
+  margin-right: 29px;
 }
 
 .feedback__icon {
   position: absolute;
-  top: -4px;
-  left: 0;
-  width: 31px;
-  height: 32px;
+  top: -5px;
+  left: 4px;
   color: #df3d3a;
-  fill: currentColor;
+  stroke: currentColor;
+  fill: transparent;
   opacity: 0;
   -webkit-transition: opacity 250ms linear;
   transition: opacity 250ms linear;
 }
 
-.feedback__accept:checked + .feedback__icon {
+.feedback__accept:checked + .feedback__custom .feedback__icon {
   opacity: 1;
 }
 
