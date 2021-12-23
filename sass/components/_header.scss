@@ -1,7 +1,12 @@
-// .header {
-//   padding-top: 30px;
-//   margin-bottom: 35px;
-// }
+.header {
+  padding-top: 16px;
+  @include mq(tablet-only) {
+    padding-top: 22px;
+  }
+  @include mq(desktop) {
+    padding-top: 30px;
+  }
+}
 .header__container {
   @include mq(not-desktop) {
     display: flex;
@@ -16,11 +21,13 @@
 }
 .header__link {
   @extend %link;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-size: 14px;
   line-height: 1.25;
   @include mq(tablet) {
+    padding-top: 30px;
+    padding-bottom: 30px;
     font-size: 16px;
     line-height: 1.19;
   }
@@ -103,8 +110,9 @@
     width: 100vw;
     z-index: 1;
     padding: 100px 20px 24px 20px;
-    transform: translateY(-100%);
+    transform: translateY(calc(-100% - 80px));
     background-color: $main-bg-color;
+    box-shadow: 0px 20px 80px #000000;
     transition: transform 250ms linear;
     &.is-open {
       transform: translateY(0);
@@ -114,8 +122,6 @@
     }
     @include mq(tablet-only) {
       min-height: 367px;
-      transform: translateY(calc(-100% - 80px));
-      box-shadow: 0px 20px 80px #000000;
     }
   }
   @include mq(desktop) {

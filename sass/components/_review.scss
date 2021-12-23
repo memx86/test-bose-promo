@@ -4,6 +4,7 @@
 }
 .review__video {
   margin-bottom: 32px;
+  border: none;
   @include mq(tablet-only) {
     width: 648px;
     height: 417px;

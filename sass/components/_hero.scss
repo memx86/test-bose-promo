@@ -1,11 +1,13 @@
 .hero {
   @extend %section;
-  padding-top: 0;
+  padding-top: 16px;
   @include mq(tablet) {
+    padding-top: 22px;
     min-height: 459px;
     position: relative;
   }
   @include mq(desktop) {
+    padding-top: 35px;
     min-height: 768px;
   }
 }

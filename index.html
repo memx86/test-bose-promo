@@ -18,23 +18,29 @@
     <header class="header">
       <div class="container header__container">
         <nav class="header__nav">
-          <a class="header__link" aria-label="Логотип Bose" href="">
+          <a
+            class="header__link"
+            aria-label="Логотип Bose"
+            href=""
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <svg class="header__logo" width="100" height="12">
               <use href="./images/sprite.svg#bose-logo"></use>
             </svg>
           </a>
           <ul class="header__list">
             <li class="header__item">
-              <a class="header__link" href="#">Характеристики</a>
+              <a class="header__link" href="#able">Характеристики</a>
             </li>
             <li class="header__item">
-              <a class="header__link" href="#">История</a>
+              <a class="header__link" href="#history">История</a>
             </li>
             <li class="header__item">
-              <a class="header__link" href="#">Отзывы</a>
+              <a class="header__link" href="#review">Отзывы</a>
             </li>
             <li class="header__item">
-              <a class="header__link" href="#">Оплата и доставка</a>
+              <a class="header__link" href="#buy">Оплата и доставка</a>
             </li>
           </ul>
         </nav>
@@ -54,22 +60,23 @@
           <div class="container">
             <ul class="mobile-menu__list">
               <li class="mobile-menu__item">
-                <a class="mobile-menu__link" href="#">Характеристики</a>
+                <a class="mobile-menu__link" href="#able">Характеристики</a>
               </li>
               <li class="mobile-menu__item">
-                <a class="mobile-menu__link" href="#">История</a>
+                <a class="mobile-menu__link" href="#history">История</a>
               </li>
               <li class="mobile-menu__item">
-                <a class="mobile-menu__link" href="#">Отзывы</a>
+                <a class="mobile-menu__link" href="#review">Отзывы</a>
               </li>
               <li class="mobile-menu__item">
-                <a class="mobile-menu__link" href="#">Оплата и доставка</a>
+                <a class="mobile-menu__link" href="#buy">Оплата и доставка</a>
               </li>
             </ul>
           </div>
         </div>
       </div>
     </header>
+
     <main>
       <!-- Герой -->
       <section class="hero">
@@ -164,7 +171,7 @@
       </section>
 
       <!-- Способны на многое -->
-      <section class="able">
+      <section class="able" id="able">
         <div class="container able__container">
           <h2 class="able__title">Cпособны на многое</h2>
           <div class="able__content">
@@ -257,12 +264,13 @@
             alt="Синусоида"
             width="220"
             height="82"
+            loading="lazy"
           />
         </div>
       </section>
 
       <!-- История -->
-      <section class="history">
+      <section class="history" id="history">
         <div class="container history__container">
           <div class="history__content">
             <h2 class="history__title">История создания бренда</h2>
@@ -328,6 +336,7 @@
                     alt="Амар Боуз общается с коллегами"
                     width="280"
                     height="251"
+                    loading="lazy"
                   />
                 </picture>
               </p>
@@ -399,6 +408,7 @@
                 alt="Фотография Амара Боуза"
                 width="280"
                 height="343"
+                loading="lazy"
               />
             </picture>
             <svg class="history__icon" width="34" height="25">
@@ -414,7 +424,7 @@
       </section>
 
       <!-- Обзоры -->
-      <section class="review">
+      <section class="review" id="review">
         <div class="container">
           <div class="review__content">
             <h2 class="review__title">Обзоры</h2>
@@ -422,11 +432,11 @@
               class="review__video"
               src="https://www.youtube-nocookie.com/embed/VqP11Ma_2Fk"
               title="YouTube video player"
-              frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
               width="280"
               height="180"
+              loading="lazy"
             ></iframe>
             <h3 class="review__subtitle">Bose Сorporation</h3>
             <p class="review__text">
@@ -447,7 +457,7 @@
       </section>
 
       <!-- FAQ  -->
-      <section class="faq">
+      <section class="faq" id="faq">
         <div class="container faq__container">
           <h2 class="faq__title">FAQ</h2>
           <details class="faq__item">
@@ -543,7 +553,7 @@
       </section>
 
       <!-- Купить -->
-      <section class="buy">
+      <section class="buy" id="buy">
         <div class="container buy__container">
           <h2 class="buy__title">bose nc 700</h2>
           <form class="buy__form">
@@ -551,19 +561,31 @@
               <input class="buy__color" type="checkbox" name="color" />
             </label>
             <label class="buy__label">
-              <a class="buy__link" href=""
+              <a
+                class="buy__link"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
                 >Наличие в магазинах
                 <svg class="buy__icon" width="20" height="20">
                   <use href="images/sprite.svg#arrow"></use>
                 </svg>
               </a>
-              <a class="buy__link" href=""
+              <a
+                class="buy__link"
+                href="#able"
+                target="_blank"
+                rel="noopener noreferrer"
                 >Характеристики
                 <svg class="buy__icon" width="20" height="20">
                   <use href="images/sprite.svg#arrow"></use>
                 </svg>
               </a>
-              <a class="buy__link" href=""
+              <a
+                class="buy__link"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
                 >Способы оплаты и доставки
                 <svg class="buy__icon" width="20" height="20">
                   <use href="images/sprite.svg#arrow"></use>
@@ -628,7 +650,7 @@
               <a
                 class="feedback__link"
                 href=""
-                target="__blank"
+                target="_blank"
                 rel="noreferrer noopener"
                 >privacy policy</a
               ></label
@@ -644,24 +666,30 @@
         <div class="footer__wrapper">
           <ul class="footer__list">
             <li class="footer__item">
-              <a class="footer__link" href="">Характеристики</a>
+              <a class="footer__link" href="#able">Характеристики</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="">История</a>
+              <a class="footer__link" href="#history">История</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="">Отзывы</a>
+              <a class="footer__link" href="#review">Отзывы</a>
             </li>
           </ul>
           <ul class="footer__list">
             <li class="footer__item">
-              <a class="footer__link" href="">Оплата и доставка</a>
+              <a class="footer__link" href="#buy">Оплата и доставка</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="">Адреса магазинов</a>
+              <a
+                class="footer__link"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Адреса магазинов</a
+              >
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="">FAQ</a>
+              <a class="footer__link" href="#faq">FAQ</a>
             </li>
           </ul>
         </div>
