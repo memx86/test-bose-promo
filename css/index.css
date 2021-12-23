@@ -787,7 +787,7 @@ main {
     min-height: 668px;
     background-image: url(../images/design/img-m.jpg);
     background-image: -webkit-image-set(url("../images/design/img-m.webp") 1x);
-    background-position: top 50px right calc(50% + 177px + 30px);
+    background-position: top 50px right calc(50% + 177px + 20px);
     background-repeat: no-repeat;
     background-size: 354px 568px;
   }
@@ -1178,7 +1178,7 @@ main {
     background-repeat: no-repeat;
     background-image: url(../images/guarantee/img-m.jpg);
     background-image: -webkit-image-set(url("../images/guarantee/img-m.webp") 1x);
-    background-position: top 50px left calc(50% - 60px - 177px);
+    background-position: top 50px left calc(50% - 60px - 177px + 40px);
     background-size: 354px 442px;
   }
   .guarantee::after {
@@ -1198,7 +1198,7 @@ main {
     min-height: 735px;
     background-image: url(../images/guarantee/img-l.jpg);
     background-image: -webkit-image-set(url("../images/guarantee/img-l.webp") 1x);
-    background-position: top 85px left calc(50% - 130px - 295px);
+    background-position: top 85px left calc(50% - 130px - 295px - 10px);
     background-size: 590px 565px;
   }
 }
@@ -1508,7 +1508,7 @@ main {
   .review__video {
     margin-bottom: unset;
     position: absolute;
-    right: calc(50% - 180px);
+    right: calc(50% - 200px);
     top: 85px;
     width: 920px;
     height: 590px;

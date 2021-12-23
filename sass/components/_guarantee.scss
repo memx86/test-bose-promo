@@ -39,7 +39,7 @@
         url('../images/guarantee/img@2x-m.webp') 2x
       );
     }
-    background-position: top 50px left calc(50% - 60px - 177px);
+    background-position: top 50px left calc(50% - 60px - 177px + 40px);
     background-size: 354px 442px;
   }
   @include mq(desktop) {
@@ -54,7 +54,7 @@
         url('../images/guarantee/img@2x-l.webp') 2x
       );
     }
-    background-position: top 85px left calc(50% - 130px - 295px);
+    background-position: top 85px left calc(50% - 130px - 295px - 10px);
     background-size: 590px 565px;
   }
 }
