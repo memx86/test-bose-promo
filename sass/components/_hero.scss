@@ -89,4 +89,8 @@
     left: calc(50% + 20px);
     margin: unset;
   }
+  @include mq(desktop) {
+    width: 700px;
+    height: 598px;
+  }
 }

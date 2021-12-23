@@ -753,6 +753,13 @@ main {
   }
 }
 
+@media (min-width: 1440px) {
+  .hero__image {
+    width: 700px;
+    height: 598px;
+  }
+}
+
 .design::after {
   content: '';
   display: block;
