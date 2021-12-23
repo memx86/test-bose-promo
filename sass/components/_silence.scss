@@ -1,16 +1,37 @@
 .silence {
   @extend %section;
-  background-image: url(../images/silence/img.jpg);
+  background-image: url(../images/silence/img-s.jpg);
+  background-image: -webkit-image-set(url('../images/silence/img-s.webp') 1x);
+  @include mq(retina) {
+    background-image: url('../images/silence/img@2x-s.jpg');
+    background-image: -webkit-image-set(
+      url('../images/silence/img@2x-s.webp') 2x
+    );
+  }
   background-repeat: no-repeat;
   background-position: top calc(26px + 29px + 32px) left 50%;
   background-size: 280px 293px;
   @include mq(tablet-only) {
-    background-image: url(../images/silence/img.jpg);
+    background-image: url(../images/silence/img-m.jpg);
+    background-image: -webkit-image-set(url('../images/silence/img-m.webp') 1x);
+    @include mq(retina) {
+      background-image: url('../images/silence/img@2x-m.jpg');
+      background-image: -webkit-image-set(
+        url('../images/silence/img@2x-m.webp') 2x
+      );
+    }
     background-position: top calc(50px + 36px + 32px) left 50%;
     background-size: 768px 293px;
   }
   @include mq(desktop) {
-    background-image: url(../images/silence/img.jpg);
+    background-image: url(../images/silence/img-l.jpg);
+    background-image: -webkit-image-set(url('../images/silence/img-l.webp') 1x);
+    @include mq(retina) {
+      background-image: url('../images/silence/img@2x-l.jpg');
+      background-image: -webkit-image-set(
+        url('../images/silence/img@2x-l.webp') 2x
+      );
+    }
     background-position: top 200px left 50%;
     background-size: 1440px 524px;
   }

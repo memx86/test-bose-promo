@@ -8,23 +8,45 @@
     height: 235px;
     margin-left: auto;
     margin-right: auto;
-    background-image: url(../images/tech/tech-img.jpg);
+    background-image: url(../images/tech/img-s.jpg);
+    background-image: -webkit-image-set(url('../images/tech/img-s.webp') 1x);
+    @include mq(retina) {
+      background-image: url('../images/tech/img@2x-s.jpg');
+      background-image: -webkit-image-set(
+        url('../images/tech/img@2x-s.webp') 2x
+      );
+    }
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 280px 235px;
   }
   @include mq(tablet) {
     &::after {
       display: none;
     }
     background-repeat: no-repeat;
-    background-image: url(../images/tech/tech-img.jpg);
+    background-image: url(../images/tech/img-m.jpg);
+    background-image: -webkit-image-set(url('../images/tech/img-m.webp') 1x);
+    @include mq(retina) {
+      background-image: url('../images/tech/img@2x-m.jpg');
+      background-image: -webkit-image-set(
+        url('../images/tech/img@2x-m.webp') 2x
+      );
+    }
     background-position: top 50px left calc(50% + 177px + 30px);
     background-size: 354px 297px;
   }
 
   @include mq(desktop) {
     min-height: 756px;
-    background-image: url(../images/tech/tech-img.jpg);
+    background-image: url(../images/tech/img-l.jpg);
+    background-image: -webkit-image-set(url('../images/tech/img-l.webp') 1x);
+    @include mq(retina) {
+      background-image: url('../images/tech/img@2x-l.jpg');
+      background-image: -webkit-image-set(
+        url('../images/tech/img@2x-l.webp') 2x
+      );
+    }
     background-position: top 85px left calc(50% + 350px + 20px);
     background-size: 700px 586px;
   }

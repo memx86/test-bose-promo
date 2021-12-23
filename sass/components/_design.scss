@@ -8,23 +8,45 @@
     margin-right: auto;
     width: 280px;
     height: 293px;
-    background-image: url(../images/design/design-img.jpg);
     background-position: center;
     background-repeat: no-repeat;
+    background-image: url(../images/design/img-s.jpg);
+    background-image: -webkit-image-set(url('../images/design/img-s.webp') 1x);
+    @include mq(retina) {
+      background-image: url('../images/design/img@2x-s.jpg');
+      background-image: -webkit-image-set(
+        url('../images/design/img@2x-s.webp') 2x
+      );
+    }
+    background-size: 280px 293px;
   }
   @include mq(tablet) {
     &::after {
       display: none;
     }
     min-height: 668px;
-    background-image: url(../images/design/design-img.jpg);
+    background-image: url(../images/design/img-m.jpg);
+    background-image: -webkit-image-set(url('../images/design/img-m.webp') 1x);
+    @include mq(retina) {
+      background-image: url('../images/design/img@2x-m.jpg');
+      background-image: -webkit-image-set(
+        url('../images/design/img@2x-m.webp') 2x
+      );
+    }
     background-position: top 50px right calc(50% + 177px + 30px);
     background-repeat: no-repeat;
     background-size: 354px 568px;
   }
   @include mq(desktop) {
     min-height: 786px;
-    background-image: url(../images/design/design-img.jpg);
+    background-image: url(../images/design/img-l.jpg);
+    background-image: -webkit-image-set(url('../images/design/img-l.webp') 1x);
+    @include mq(retina) {
+      background-image: url('../images/design/img@2x-l.jpg');
+      background-image: -webkit-image-set(
+        url('../images/design/img@2x-l.webp') 2x
+      );
+    }
     background-position: top 85px right calc(50% + 295px + 95px);
     background-size: 590px 616px;
   }
