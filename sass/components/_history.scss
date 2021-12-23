@@ -63,6 +63,7 @@
 }
 .history__img {
   position: absolute;
+  max-width: unset;
   @include mq(mobile-only) {
     left: 0;
     bottom: 0;

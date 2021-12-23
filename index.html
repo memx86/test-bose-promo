@@ -273,13 +273,63 @@
                 (Amar Bose) приобрёл одну из лучших по тем временам стереосистем
                 для своего дома. После нескольких минут прослушивания
                 аудиозаписи его недоумение сменилось разочарованием.
-                <img
-                  class="history__img"
-                  src="./images/history/history-img.jpg"
-                  alt="Амар Боуз общается с коллегами"
-                  width="280"
-                  height="251"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/history/img-l.webp    1x,
+                      ./images/history/img@2x-l.webp 2x
+                    "
+                    media="(min-width: 1440px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/history/img-l.jpg    1x,
+                      ./images/history/img@2x-l.jpg 2x
+                    "
+                    media="(min-width: 1440px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/history/img-m.webp    1x,
+                      ./images/history/img@2x-m.webp 2x
+                    "
+                    media="(min-width: 768px) and (max-width: 1439px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/history/img-m.jpg    1x,
+                      ./images/history/img@2x-m.jpg 2x
+                    "
+                    media="(min-width: 768px) and (max-width: 1439px)"
+                    type="image/jpeg"
+                  />
+                  <source
+                    srcset="
+                      ./images/history/img-s.webp    1x,
+                      ./images/history/img@2x-s.webp 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      ./images/history/img-s.jpg    1x,
+                      ./images/history/img@2x-s.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                    type="image/jpeg"
+                  />
+                  <img
+                    class="history__img"
+                    src="./images/history/img-s.jpg"
+                    alt="Амар Боуз общается с коллегами"
+                    width="280"
+                    height="251"
+                  />
+                </picture>
               </p>
               <p class="history__text">
                 С точки зрения Амара звук был настолько плоским и
@@ -294,13 +344,63 @@
               аудиотехнику, которая будет передавать звук безупречно точно и
               естественно.
             </p>
-            <img
-              class="history__image"
-              src="./images/history/AmarBose.jpg"
-              alt="Фотография Амара Боуза"
-              width="280"
-              height="343"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./images/history/image-l.webp    1x,
+                  ./images/history/image@2x-l.webp 2x
+                "
+                media="(min-width: 1440px)"
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./images/history/image-l.jpg    1x,
+                  ./images/history/image@2x-l.jpg 2x
+                "
+                media="(min-width: 1440px)"
+                type="image/jpeg"
+              />
+              <source
+                srcset="
+                  ./images/history/image-m.webp    1x,
+                  ./images/history/image@2x-m.webp 2x
+                "
+                media="(min-width: 768px) and (max-width: 1439px)"
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./images/history/image-m.jpg    1x,
+                  ./images/history/image@2x-m.jpg 2x
+                "
+                media="(min-width: 768px) and (max-width: 1439px)"
+                type="image/jpeg"
+              />
+              <source
+                srcset="
+                  ./images/history/image-s.webp    1x,
+                  ./images/history/image@2x-s.webp 2x
+                "
+                media="(max-width: 767px)"
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./images/history/image-s.jpg    1x,
+                  ./images/history/image@2x-s.jpg 2x
+                "
+                media="(max-width: 767px)"
+                type="image/jpeg"
+              />
+              <img
+                class="history__image"
+                src="./images/history/image-s.jpg"
+                alt="Фотография Амара Боуза"
+                width="280"
+                height="343"
+              />
+            </picture>
             <svg class="history__icon" width="34" height="25">
               <use href="./images/sprite.svg#quote"></use>
             </svg>

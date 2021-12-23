@@ -131,7 +131,14 @@
     width: 280px;
     height: 265px;
     transform: translateY(-100%);
-    background-image: url('../images/buy/img-black.jpg');
+    background-image: url('../images/buy/black-s.jpg');
+    background-image: -webkit-image-set(url('../images/buy/black-s.webp') 1x);
+    @include mq(retina) {
+      background-image: url('../images/buy/black@2x-s.jpg');
+      background-image: -webkit-image-set(
+        url('../images/buy/black@2x-s.webp') 2x
+      );
+    }
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -139,7 +146,14 @@
     @include mq(tablet-only) {
       width: 648px;
       height: 446px;
-      background-image: url('../images/buy/img-black.jpg');
+      background-image: url('../images/buy/black-m.jpg');
+      background-image: -webkit-image-set(url('../images/buy/black-m.webp') 1x);
+      @include mq(retina) {
+        background-image: url('../images/buy/black@2x-m.jpg');
+        background-image: -webkit-image-set(
+          url('../images/buy/black@2x-m.webp') 2x
+        );
+      }
     }
     @include mq(desktop) {
       top: -110px;
@@ -147,16 +161,44 @@
       width: 700px;
       height: 664px;
       transform: translateY(0);
-      background-image: url('../images/buy/img-black.jpg');
+      background-image: url('../images/buy/black-l.jpg');
+      background-image: -webkit-image-set(url('../images/buy/black-l.webp') 1x);
+      @include mq(retina) {
+        background-image: url('../images/buy/black@2x-l.jpg');
+        background-image: -webkit-image-set(
+          url('../images/buy/black@2x-l.webp') 2x
+        );
+      }
     }
   }
   &:checked::after {
-    background-image: url('../images/buy/img-white.jpg');
+    background-image: url('../images/buy/white-s.jpg');
+    background-image: -webkit-image-set(url('../images/buy/white-s.webp') 1x);
+    @include mq(retina) {
+      background-image: url('../images/buy/white@2x-s.jpg');
+      background-image: -webkit-image-set(
+        url('../images/buy/white@2x-s.webp') 2x
+      );
+    }
     @include mq(tablet-only) {
-      background-image: url('../images/buy/img-white.jpg');
+      background-image: url('../images/buy/white-m.jpg');
+      background-image: -webkit-image-set(url('../images/buy/white-m.webp') 1x);
+      @include mq(retina) {
+        background-image: url('../images/buy/white@2x-m.jpg');
+        background-image: -webkit-image-set(
+          url('../images/buy/white@2x-m.webp') 2x
+        );
+      }
     }
     @include mq(desktop) {
-      background-image: url('../images/buy/img-white.jpg');
+      background-image: url('../images/buy/white-l.jpg');
+      background-image: -webkit-image-set(url('../images/buy/white-l.webp') 1x);
+      @include mq(retina) {
+        background-image: url('../images/buy/white@2x-l.jpg');
+        background-image: -webkit-image-set(
+          url('../images/buy/white@2x-l.webp') 2x
+        );
+      }
     }
   }
 }
