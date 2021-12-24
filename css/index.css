@@ -104,6 +104,10 @@
   }
 }
 
+.wrapper {
+  overflow: hidden;
+}
+
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -431,10 +435,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-main {
-  overflow: hidden;
 }
 
 .header {
@@ -1512,7 +1512,15 @@ main {
 }
 
 .glider {
-  position: relative;
+  margin-bottom: 32px;
+  overflow: hidden;
+}
+
+@media (min-width: 1440px) {
+  .glider {
+    position: relative;
+    margin-bottom: 70px;
+  }
 }
 
 .glider-slide {
@@ -1563,16 +1571,6 @@ main {
 .review__subtitle {
   margin-bottom: 16px;
   color: #df3d3a;
-}
-
-.review__text {
-  margin-bottom: 32px;
-}
-
-@media (min-width: 1440px) {
-  .review__text {
-    margin-bottom: 70px;
-  }
 }
 
 .dots {

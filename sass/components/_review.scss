@@ -2,7 +2,12 @@
   @extend %section;
 }
 .glider {
-  position: relative;
+  margin-bottom: 32px;
+  overflow: hidden;
+  @include mq(desktop) {
+    position: relative;
+    margin-bottom: 70px;
+  }
 }
 .glider-slide {
   position: relative;
@@ -43,12 +48,6 @@
   @extend %subtitle;
   margin-bottom: 16px;
   color: $accent-color;
-}
-.review__text {
-  margin-bottom: 32px;
-  @include mq(desktop) {
-    margin-bottom: 70px;
-  }
 }
 // .review__list {
 //   @extend %list;
