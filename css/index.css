@@ -433,10 +433,6 @@ img {
   height: auto;
 }
 
-main {
-  overflow: hidden;
-}
-
 .header {
   padding-top: 16px;
 }
@@ -582,6 +578,8 @@ main {
 .burger__button.is-open .burger__item--top {
   -webkit-transform: translateY(5px) rotate(45deg);
           transform: translateY(5px) rotate(45deg);
+  -webkit-transition-delay: 125ms;
+          transition-delay: 125ms;
 }
 
 .burger__button.is-open .burger__item--center {
@@ -592,6 +590,8 @@ main {
 .burger__button.is-open .burger__item--bottom {
   -webkit-transform: translateY(-5px) rotate(-225deg);
           transform: translateY(-5px) rotate(-225deg);
+  -webkit-transition-delay: 250ms;
+          transition-delay: 250ms;
 }
 
 @media (max-width: 1439.98px) {
@@ -1166,6 +1166,7 @@ main {
 
 .guarantee {
   position: relative;
+  overflow-x: hidden;
 }
 
 .guarantee::after {

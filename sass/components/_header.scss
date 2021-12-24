@@ -94,12 +94,14 @@
   }
   .burger__button.is-open &--top {
     transform: translateY(5px) rotate(45deg);
+    transition-delay: 125ms;
   }
   .burger__button.is-open &--center {
     transform: translateX(100%);
   }
   .burger__button.is-open &--bottom {
     transform: translateY(-5px) rotate(-225deg);
+    transition-delay: 250ms;
   }
 }
 .mobile-menu {
