@@ -1588,6 +1588,9 @@ img {
 }
 
 .glider-dot {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
   margin-right: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1599,14 +1602,14 @@ img {
   height: 25px;
   border-radius: 0;
   color: #df3d3a;
-  background-color: transparent;
+  background: none;
   opacity: 0.2;
   -webkit-transition: opacity 250ms linear;
   transition: opacity 250ms linear;
 }
 
 .glider-dot:hover, .glider-dot:focus {
-  background-color: transparent;
+  background: none;
 }
 
 .glider-dot::before {
@@ -1632,7 +1635,7 @@ img {
 
 .glider-dot.active {
   opacity: 1;
-  background-color: transparent;
+  background: none;
 }
 
 @media (min-width: 1440px) {

@@ -89,6 +89,9 @@
   }
 }
 .glider-dot {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
   margin-right: 40px;
   display: flex;
   align-items: center;
@@ -96,12 +99,12 @@
   height: 25px;
   border-radius: 0;
   color: $accent-color;
-  background-color: transparent;
+  background: none;
   opacity: 0.2;
   transition: opacity 250ms linear;
   &:hover,
   &:focus {
-    background-color: transparent;
+    background: none;
   }
   &::before {
     content: '';
@@ -123,7 +126,7 @@
   }
   &.active {
     opacity: 1;
-    background-color: transparent;
+    background: none;
   }
   @include mq(desktop) {
     margin-right: 30px;
