@@ -1,7 +1,7 @@
 (() => {
   const menuBtnRef = document.querySelector('[data-menu-button]');
   const mobileMenuRef = document.querySelector('[data-menu]');
-  const mobileLink = document.querySelectorAll('.mobile-menu__link');
+  const mobileLinks = document.querySelectorAll('.mobile-menu__link');
 
   const doMagic = () => {
     const expanded =
@@ -15,7 +15,7 @@
   };
 
   menuBtnRef.addEventListener('click', doMagic);
-  for (let i = 0; i < mobileLink.length; i++) {
-    mobileLink[i].addEventListener('click', doMagic);
+  for (const link of mobileLinks) {
+    link.addEventListener('click', doMagic);
   }
 })();
