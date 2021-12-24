@@ -433,6 +433,10 @@ img {
   height: auto;
 }
 
+main {
+  overflow: hidden;
+}
+
 .header {
   padding-top: 16px;
 }
@@ -1166,7 +1170,6 @@ img {
 
 .guarantee {
   position: relative;
-  overflow-x: hidden;
 }
 
 .guarantee::after {

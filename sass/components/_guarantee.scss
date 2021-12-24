@@ -1,7 +1,6 @@
 .guarantee {
   @extend %section;
   position: relative;
-  overflow-x: hidden;
   &::after {
     content: '';
     display: block;
