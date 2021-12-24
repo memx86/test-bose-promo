@@ -42,8 +42,8 @@
     font-size: 16px;
   }
   &::before {
-    counter-increment: section;
-    content: '0' counter(section);
+    counter-increment: faq;
+    content: '0' counter(faq);
     margin-right: 16px;
     font-size: 20px;
     @include mq(desktop) {

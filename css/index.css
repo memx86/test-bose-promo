@@ -401,7 +401,7 @@ body {
   font-size: 14px;
   line-height: 1.25;
   background-color: #191919;
-  counter-reset: section;
+  counter-reset: review faq;
 }
 
 @media (min-width: 768px) {
@@ -1614,8 +1614,8 @@ img {
 
 .glider-dot::before {
   content: '';
-  counter-increment: section;
-  content: "0" counter(section);
+  counter-increment: review;
+  content: "0" counter(review);
   font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, roboto, Ubuntu, noto, arial, sans-serif;
   font-size: 20px;
   line-height: 1.25;
@@ -1639,9 +1639,6 @@ img {
 }
 
 @media (min-width: 1440px) {
-  .glider-dot {
-    margin-right: 30px;
-  }
   .glider-dot:not(:last-child)::after {
     margin-left: 12px;
   }
@@ -1710,8 +1707,8 @@ img {
 }
 
 .faq__subtitle::before {
-  counter-increment: section;
-  content: "0" counter(section);
+  counter-increment: faq;
+  content: "0" counter(faq);
   margin-right: 16px;
   font-size: 20px;
 }

@@ -108,8 +108,8 @@
   }
   &::before {
     content: '';
-    counter-increment: section;
-    content: '0' counter(section);
+    counter-increment: review;
+    content: '0' counter(review);
     font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont,
       avenir next, avenir, segoe ui, helvetica neue, helvetica, roboto, Ubuntu,
       noto, arial, sans-serif;
@@ -129,7 +129,6 @@
     background: none;
   }
   @include mq(desktop) {
-    margin-right: 30px;
     &:not(:last-child)::after {
       margin-left: 12px;
     }

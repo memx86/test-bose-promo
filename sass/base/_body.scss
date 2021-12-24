@@ -12,7 +12,7 @@ body {
     font-size: 20px;
   }
   background-color: $main-bg-color;
-  counter-reset: section;
+  counter-reset: review faq;
   &.modal-open {
     overflow: hidden;
   }
