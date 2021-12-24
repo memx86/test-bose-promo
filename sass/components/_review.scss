@@ -1,5 +1,10 @@
 .review {
   @extend %section;
+}
+.glider {
+  position: relative;
+}
+.glider-slide {
   position: relative;
 }
 .review__video {
@@ -12,8 +17,10 @@
   @include mq(desktop) {
     margin-bottom: unset;
     position: absolute;
-    right: calc(50% - 200px);
-    top: 85px;
+    // right: calc(50% - 200px);
+    // top: 85px;
+    left: 1px;
+    top: 0;
     width: 920px;
     height: 590px;
   }
@@ -22,6 +29,7 @@
   @include mq(desktop) {
     margin-left: auto;
     width: 258px;
+    min-height: 590px;
   }
 }
 .review__title {
@@ -42,32 +50,84 @@
     margin-bottom: 70px;
   }
 }
-.review__list {
-  @extend %list;
-  display: flex;
-  font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont,
-    avenir next, avenir, segoe ui, helvetica neue, helvetica, roboto, Ubuntu,
-    noto, arial, sans-serif;
-  font-size: 20px;
-  line-height: 1.25;
-  color: $accent-color;
+// .review__list {
+//   @extend %list;
+//   display: flex;
+//   font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont,
+//     avenir next, avenir, segoe ui, helvetica neue, helvetica, roboto, Ubuntu,
+//     noto, arial, sans-serif;
+//   font-size: 20px;
+//   line-height: 1.25;
+//   color: $accent-color;
+//   @include mq(desktop) {
+//     font-size: 28px;
+//   }
+// }
+// .review__item {
+//   margin-right: 14px;
+//   &:not(:last-child)::after {
+//     content: '-';
+//     margin-left: 20px;
+//   }
+//   opacity: 0.2;
+//   transition: opacity 250ms linear;
+//   &.active {
+//     opacity: 1;
+//   }
+//   @include mq(desktop) {
+//     margin-right: 12px;
+//     &:not(:last-child)::after {
+//       margin-left: 12px;
+//     }
+//   }
+// }
+.dots {
+  justify-content: left;
   @include mq(desktop) {
-    font-size: 28px;
+    position: absolute;
+    right: 110px;
+    bottom: 0;
   }
 }
-.review__item {
-  margin-right: 14px;
+.glider-dot {
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+  width: 20px;
+  height: 25px;
+  border-radius: 0;
+  color: $accent-color;
+  background-color: transparent;
+  opacity: 0.2;
+  transition: opacity 250ms linear;
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+  &::before {
+    content: '';
+    counter-increment: section;
+    content: '0' counter(section);
+    font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont,
+      avenir next, avenir, segoe ui, helvetica neue, helvetica, roboto, Ubuntu,
+      noto, arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.25;
+    @include mq(desktop) {
+      font-size: 28px;
+    }
+  }
   &:not(:last-child)::after {
     content: '-';
     margin-left: 20px;
+    color: $accent-color;
   }
-  opacity: 0.2;
-  transition: opacity 250ms linear;
   &.active {
     opacity: 1;
+    background-color: transparent;
   }
   @include mq(desktop) {
-    margin-right: 12px;
+    margin-right: 30px;
     &:not(:last-child)::after {
       margin-left: 12px;
     }

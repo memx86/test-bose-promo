@@ -16,7 +16,7 @@
   color: inherit;
 }
 
-.header__list, .mobile-menu__list, .design__list, .able__list, .silence__list, .guarantee__list, .review__list, .footer__list {
+.header__list, .mobile-menu__list, .design__list, .able__list, .silence__list, .guarantee__list, .footer__list {
   list-style: none;
   padding: 0;
 }
@@ -1511,7 +1511,11 @@ main {
   }
 }
 
-.review {
+.glider {
+  position: relative;
+}
+
+.glider-slide {
   position: relative;
 }
 
@@ -1531,8 +1535,8 @@ main {
   .review__video {
     margin-bottom: unset;
     position: absolute;
-    right: calc(50% - 200px);
-    top: 85px;
+    left: 1px;
+    top: 0;
     width: 920px;
     height: 590px;
   }
@@ -1542,6 +1546,7 @@ main {
   .review__content {
     margin-left: auto;
     width: 258px;
+    min-height: 590px;
   }
 }
 
@@ -1570,43 +1575,73 @@ main {
   }
 }
 
-.review__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, roboto, Ubuntu, noto, arial, sans-serif;
-  font-size: 20px;
-  line-height: 1.25;
-  color: #df3d3a;
+.dots {
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
 }
 
 @media (min-width: 1440px) {
-  .review__list {
-    font-size: 28px;
+  .dots {
+    position: absolute;
+    right: 110px;
+    bottom: 0;
   }
 }
 
-.review__item {
-  margin-right: 14px;
+.glider-dot {
+  margin-right: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20px;
+  height: 25px;
+  border-radius: 0;
+  color: #df3d3a;
+  background-color: transparent;
   opacity: 0.2;
   -webkit-transition: opacity 250ms linear;
   transition: opacity 250ms linear;
 }
 
-.review__item:not(:last-child)::after {
-  content: '-';
-  margin-left: 20px;
+.glider-dot:hover, .glider-dot:focus {
+  background-color: transparent;
 }
 
-.review__item.active {
-  opacity: 1;
+.glider-dot::before {
+  content: '';
+  counter-increment: section;
+  content: "0" counter(section);
+  font-family: 'Roboto Condensed', -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, roboto, Ubuntu, noto, arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.25;
 }
 
 @media (min-width: 1440px) {
-  .review__item {
-    margin-right: 12px;
+  .glider-dot::before {
+    font-size: 28px;
   }
-  .review__item:not(:last-child)::after {
+}
+
+.glider-dot:not(:last-child)::after {
+  content: '-';
+  margin-left: 20px;
+  color: #df3d3a;
+}
+
+.glider-dot.active {
+  opacity: 1;
+  background-color: transparent;
+}
+
+@media (min-width: 1440px) {
+  .glider-dot {
+    margin-right: 30px;
+  }
+  .glider-dot:not(:last-child)::after {
     margin-left: 12px;
   }
 }
