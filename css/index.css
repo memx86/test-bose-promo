@@ -395,6 +395,10 @@ summary {
   font-style: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: rgba(255, 255, 255, 0.8);
   font-family: Gilroy, -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, roboto, Ubuntu, noto, arial, sans-serif;
