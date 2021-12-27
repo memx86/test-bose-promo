@@ -1,10 +1,12 @@
 .able {
   @extend %section;
+  @include mq(desktop) {
+    padding-left: 28px;
+  }
 }
 .able__container {
   @include mq(desktop) {
     max-width: 1128px;
-    margin-left: 170px;
   }
 }
 .able__title {

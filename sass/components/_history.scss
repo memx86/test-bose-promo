@@ -8,128 +8,132 @@
   }
 }
 .history__content {
+  display: grid;
+  gap: 32px;
   &:not(:last-child) {
     margin-bottom: 16px;
   }
-  @include mq(tablet-only) {
-    max-width: 294px;
-    position: relative;
+  @include mq(tablet) {
     &:first-child {
-      min-height: 524px;
-    }
-    &:last-child {
-      margin-left: auto;
+      grid-template-columns: 294px 1fr;
+      column-gap: 60px;
+      row-gap: 16px;
+      grid-template-areas:
+        'title img'
+        'text1 img'
+        'text2 img';
     }
     &:not(:last-child) {
       margin-bottom: 32px;
     }
+    &:last-child {
+      grid-template-columns: 294px 294px;
+      column-gap: 60px;
+      grid-template-areas:
+        'img pquote'
+        'img icon'
+        'img quote'
+        'img quoted';
+    }
   }
   @include mq(desktop) {
-    max-width: 510px;
-    position: relative;
     &:first-child {
-      min-height: 628px;
-    }
-    &:last-child {
-      margin-left: auto;
+      grid-template-columns: 400px 1fr;
+      column-gap: 150px;
     }
     &:not(:last-child) {
       margin-bottom: 40px;
+    }
+    &:last-child {
+      grid-template-columns: 290px 510px;
+      column-gap: 260px;
     }
   }
 }
 .history__title {
   @extend %title;
   max-width: 139px;
-  margin-bottom: 32px;
-  @include mq(tablet-only) {
+  @include mq(tablet) {
+    margin-bottom: 16px;
     max-width: 174px;
+    grid-area: title;
   }
   @include mq(desktop) {
-    margin-bottom: 50px;
+    margin-bottom: calc(50px - 16px);
     max-width: 313px;
   }
 }
 .history__text {
-  position: relative;
-  &:first-child {
-    margin-bottom: calc(32px + 251px + 32px);
-  }
   @include mq(tablet) {
-    &:first-child {
-      margin-bottom: 16px;
+    &:first-of-type {
+      grid-area: text1;
+    }
+    &:last-of-type {
+      grid-area: text2;
+    }
+  }
+}
+.history__picture {
+  @include mq(tablet) {
+    grid-area: img;
+    &:last-of-type {
+      place-self: end left;
     }
   }
 }
 .history__img {
-  position: absolute;
   max-width: unset;
-  @include mq(mobile-only) {
-    left: 0;
-    bottom: 0;
-    transform: translateY(calc(100% + 32px));
-  }
   @include mq(tablet-only) {
-    top: calc(-32px - 108px);
-    left: calc(294px + 60px);
     width: 354px;
     height: 524px;
   }
   @include mq(desktop) {
-    top: calc(-50px - 195px);
-    left: calc(400px + 150px);
     width: 700px;
     height: 628px;
   }
 }
+
 .history__image {
   margin-bottom: 32px;
   @include mq(tablet) {
     margin-bottom: unset;
     width: 294px;
     height: 355px;
-    position: absolute;
-    left: -58px;
-    bottom: 0;
-    transform: translateX(-100%);
   }
   @include mq(desktop) {
     width: 290px;
     height: 355px;
-    left: -260px;
   }
 }
 .history__pre-quote {
-  margin-bottom: 32px;
-  @include mq(tablet-only) {
-    margin-bottom: 108px;
+  @include mq(tablet) {
+    grid-area: pquote;
   }
   @include mq(desktop) {
-    margin-bottom: 90px;
+    margin-bottom: calc(90px - 32px);
   }
 }
 .history__icon {
-  margin-bottom: 24px;
   width: 34px;
   height: 25px;
   color: $accent-color;
   fill: currentColor;
-  @include mq(tablet-only) {
-    margin-bottom: 52px;
+  @include mq(tablet) {
+    grid-area: icon;
+    margin-bottom: calc(52px - 32px);
   }
   @include mq(desktop) {
-    margin-bottom: 50px;
+    margin-bottom: calc(50px - 32px);
   }
 }
 .history__quote {
-  margin-bottom: 16px;
   max-width: 382px;
   font-weight: 600;
   font-size: 20px;
   line-height: 1.25;
   color: #e7e7e7;
   @include mq(tablet) {
-    margin-bottom: 32px;
+    grid-area: quote;
   }
   @include mq(desktop) {
     font-size: 28px;
@@ -139,6 +143,9 @@
   font-size: 14px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.4);
+  @include mq(tablet) {
+    grid-area: quoted;
+  }
   @include mq(desktop) {
     font-size: 16px;
     line-height: 1;
